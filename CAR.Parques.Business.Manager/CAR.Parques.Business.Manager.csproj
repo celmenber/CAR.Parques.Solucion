@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{136705C5-ED8C-483F-8A89-835C8925CA4E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CAR.Parques.Business.Manager</RootNamespace>
+    <AssemblyName>CAR.Parques.Business.Manager</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Managers\Base\ManagerBase.cs" />
+    <Compile Include="Managers\GestorContenido\GestorContenidoManager.cs" />
+    <Compile Include="Managers\Log\LogManager.cs" />
+    <Compile Include="Managers\Parametricos\DepartamentoManager.cs" />
+    <Compile Include="Managers\Parametricos\EstadoReservaManager.cs" />
+    <Compile Include="Managers\Parametricos\EstadoServicioManager.cs" />
+    <Compile Include="Managers\Parametricos\MunicipioManager.cs" />
+    <Compile Include="Managers\Parametricos\TipoArchivoManager.cs" />
+    <Compile Include="Managers\Parametricos\TipoContenidoManager.cs" />
+    <Compile Include="Managers\Parametricos\TipoDocumentoManager.cs" />
+    <Compile Include="Managers\Parametricos\TipoModuloManager.cs" />
+    <Compile Include="Managers\Parametricos\TipoServicioManager.cs" />
+    <Compile Include="Managers\Parametricos\TipoUsuarioManager.cs" />
+    <Compile Include="Managers\Parque\ArchivoParqueManager.cs" />
+    <Compile Include="Managers\Parque\ParqueManager.cs" />
+    <Compile Include="Managers\Parque\ServicioParqueManager.cs" />
+    <Compile Include="Managers\Reserva\ArchivoReservaManager.cs" />
+    <Compile Include="Managers\Reserva\BitacoraReservaManager.cs" />
+    <Compile Include="Managers\Reserva\DescuentoTipoUsuarioManager.cs" />
+    <Compile Include="Managers\Reserva\DetalleReservaManager.cs" />
+    <Compile Include="Managers\Reserva\ReservaManager.cs" />
+    <Compile Include="Managers\Usuario\MenuManager.cs" />
+    <Compile Include="Managers\Usuario\MenuPerfilManager.cs" />
+    <Compile Include="Managers\Usuario\PerfilManager.cs" />
+    <Compile Include="Managers\Usuario\UsuarioManager.cs" />
+    <Compile Include="Managers\Utilitarios\ManejoCorreoManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\CAR.Parques.Business.Contract\CAR.Parques.Business.Contract.csproj">
+      <Project>{7ECF2A23-194C-49DA-B79A-BE21BA418FE4}</Project>
+      <Name>CAR.Parques.Business.Contract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAR.Parques.Common.Core\CAR.Parques.Common.Core.csproj">
+      <Project>{3EC41E2A-FA36-4217-AC3A-855A8D559C34}</Project>
+      <Name>CAR.Parques.Common.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAR.Parques.Common.Entities\CAR.Parques.Common.Entities.csproj">
+      <Project>{DB9A0A70-C499-409A-AE14-08DE042C832E}</Project>
+      <Name>CAR.Parques.Common.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAR.Parques.Common.Models\CAR.Parques.Common.Models.csproj">
+      <Project>{284C68A6-83C5-47D8-B3C0-DE6E5FFD57AA}</Project>
+      <Name>CAR.Parques.Common.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAR.Parques.Data.DataTransferObjects\CAR.Parques.Data.DataTransferObjects.csproj">
+      <Project>{0F7F6A6F-41AF-4E3A-89D9-10617CF949E4}</Project>
+      <Name>CAR.Parques.Data.DataTransferObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CAR.Parques.DataContract\CAR.Parques.DataContract.csproj">
+      <Project>{028F73FE-84A6-4AB3-A255-ED0C7FEC2F8B}</Project>
+      <Name>CAR.Parques.DataContract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{284C68A6-83C5-47D8-B3C0-DE6E5FFD57AA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CAR.Parques.Common.Models</RootNamespace>
+    <AssemblyName>CAR.Parques.Common.Models</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\Reservas\EnumsReserva.cs" />
+    <Compile Include="Modelos\Base\ModeloBase.cs" />
+    <Compile Include="Modelos\Base\ResultadoEjecucionModel.cs" />
+    <Compile Include="Modelos\GestorContenido\GestorContenidoModel.cs" />
+    <Compile Include="Modelos\Parametricos\DepartamentoModel.cs" />
+    <Compile Include="Modelos\Parametricos\EstadoReservaModel.cs" />
+    <Compile Include="Modelos\Parametricos\EstadoServicioModel.cs" />
+    <Compile Include="Modelos\Parametricos\MunicipioModel.cs" />
+    <Compile Include="Modelos\Parametricos\TipoArchivoModel.cs" />
+    <Compile Include="Modelos\Parametricos\TipoContenidoModel.cs" />
+    <Compile Include="Modelos\Parametricos\TipoDocumentoModel.cs" />
+    <Compile Include="Modelos\Parametricos\TipoModuloModel.cs" />
+    <Compile Include="Modelos\Parametricos\TipoServicioModel.cs" />
+    <Compile Include="Modelos\Parametricos\TipoUsuarioModel.cs" />
+    <Compile Include="Modelos\Parques\ArchivoParqueModel.cs" />
+    <Compile Include="Modelos\Parques\ArchivoReservaModel.cs" />
+    <Compile Include="Modelos\Parques\InformacionParqueModel.cs" />
+    <Compile Include="Modelos\Parques\LinksExternosParqueModel.cs" />
+    <Compile Include="Modelos\Parques\ParqueDetalleModel.cs" />
+    <Compile Include="Modelos\Parques\ParqueInformacionModel.cs" />
+    <Compile Include="Modelos\Parques\ParqueModel.cs" />
+    <Compile Include="Modelos\Parques\ServicioParqueDetalleModel.cs" />
+    <Compile Include="Modelos\Parques\ServicioParqueModel.cs" />
+    <Compile Include="Modelos\Reserva\BitacoraReservaModel.cs" />
+    <Compile Include="Modelos\Reserva\DescuentoTipoUsuarioDetalleModel.cs" />
+    <Compile Include="Modelos\Reserva\DescuentoTipoUsuarioModel.cs" />
+    <Compile Include="Modelos\Reserva\DetalleReservaModel.cs" />
+    <Compile Include="Modelos\Reserva\DetalleServicioReservaModel.cs" />
+    <Compile Include="Modelos\Reserva\FiltroReserva.cs" />
+    <Compile Include="Modelos\Reserva\ReservaDetalleServicioModel.cs" />
+    <Compile Include="Modelos\Reserva\ReservaModel.cs" />
+    <Compile Include="Modelos\Reserva\RevDetalleModel.cs" />
+    <Compile Include="Modelos\Usuario\MenuModel.cs" />
+    <Compile Include="Modelos\Usuario\MenuPerfilModel.cs" />
+    <Compile Include="Modelos\Usuario\PerfilModel.cs" />
+    <Compile Include="Modelos\Usuario\RestablecerModel.cs" />
+    <Compile Include="Modelos\Usuario\UsuarioDetalleModel.cs" />
+    <Compile Include="Modelos\Usuario\UsuarioModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modelos\Log\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

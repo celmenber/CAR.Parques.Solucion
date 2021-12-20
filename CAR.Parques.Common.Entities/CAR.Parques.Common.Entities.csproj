@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB9A0A70-C499-409A-AE14-08DE042C832E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CAR.Parques.Common.Entities</RootNamespace>
+    <AssemblyName>CAR.Parques.Common.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entidades\Base\EntidadBase.cs" />
+    <Compile Include="Entidades\Base\ResultadoEjecucion.cs" />
+    <Compile Include="Entidades\Bitacora\DatosTransaccion.cs" />
+    <Compile Include="Entidades\Bitacora\LogExepTransaccion.cs" />
+    <Compile Include="Entidades\Bitacora\LogTransaccion.cs" />
+    <Compile Include="Entidades\GestorContenido\GestorContenidoEO.cs" />
+    <Compile Include="Entidades\Parametricos\DepartamentoEO.cs" />
+    <Compile Include="Entidades\Parametricos\EstadoReservaEO.cs" />
+    <Compile Include="Entidades\Parametricos\EstadoServicioEO.cs" />
+    <Compile Include="Entidades\Parametricos\MunicipioEO.cs" />
+    <Compile Include="Entidades\Parametricos\TipoArchivoEO.cs" />
+    <Compile Include="Entidades\Parametricos\TipoContenidoEO.cs" />
+    <Compile Include="Entidades\Parametricos\TipoDocumentoEO.cs" />
+    <Compile Include="Entidades\Parametricos\TipoModuloEO.cs" />
+    <Compile Include="Entidades\Parametricos\TipoServicioEO.cs" />
+    <Compile Include="Entidades\Parametricos\TipoUsuarioEO.cs" />
+    <Compile Include="Entidades\Reserva\ArchivoReservaEO.cs" />
+    <Compile Include="Entidades\Parques\ArchivoParqueEO.cs" />
+    <Compile Include="Entidades\Parques\InformacionParqueEO.cs" />
+    <Compile Include="Entidades\Parques\InformacionParqueLinksEO.cs" />
+    <Compile Include="Entidades\Parques\LinksExternosParqueEO.cs" />
+    <Compile Include="Entidades\Parques\ParqueDetalleEO.cs" />
+    <Compile Include="Entidades\Parques\ParqueEO.cs" />
+    <Compile Include="Entidades\Parques\ParqueInformacionEO.cs" />
+    <Compile Include="Entidades\Parques\ServicioParqueDetalleEO.cs" />
+    <Compile Include="Entidades\Parques\ServicioParqueEO.cs" />
+    <Compile Include="Entidades\Parques\TipoArchivoEO.cs" />
+    <Compile Include="Entidades\Reserva\BitacoraReservaEO.cs" />
+    <Compile Include="Entidades\Reserva\DescuentoTipoUsuarioDetalleEO.cs" />
+    <Compile Include="Entidades\Reserva\DescuentoTipoUsuarioEO.cs" />
+    <Compile Include="Entidades\Reserva\DetalleServicioReservaEO.cs" />
+    <Compile Include="Entidades\Reserva\DetalleReservaEO.cs" />
+    <Compile Include="Entidades\Reserva\ReservaDetalleServicioEO.cs" />
+    <Compile Include="Entidades\Reserva\ReservaEO.cs" />
+    <Compile Include="Entidades\Reserva\RevDetalleEO.cs" />
+    <Compile Include="Entidades\Usuario\MenuEO.cs" />
+    <Compile Include="Entidades\Usuario\MenuPerfilEO.cs" />
+    <Compile Include="Entidades\Usuario\PerfilEO.cs" />
+    <Compile Include="Entidades\Usuario\RestablecerEO.cs" />
+    <Compile Include="Entidades\Usuario\TokenRestablecimientoEO.cs" />
+    <Compile Include="Entidades\Usuario\UsuarioDetalleEO.cs" />
+    <Compile Include="Entidades\Usuario\UsuarioEO.cs" />
+    <Compile Include="Entidades\Utilidades\PlantillasCorreoEO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

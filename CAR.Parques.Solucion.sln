@@ -1,0 +1,239 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Comun", "0. Comun", "{AA14CB40-142D-4610-A613-4250431E41CB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Datos", "1.Datos", "{8AE147C5-0B67-4B99-ADE1-FA12D835F6C7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Negocio", "2.Negocio", "{BD138F2A-8019-4612-B089-E07DE74663BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Servicios", "4.Servicios", "{588C1B03-2C01-4754-963E-A2CA5B1E9E9F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.ClienteServicios", "3.ClienteServicios", "{43C7B8B1-53A0-4465-A757-C632A6F80A17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.Presentacion", "5.Presentacion", "{377FE0F0-A023-450F-88CE-332BFDEA60ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.PruebasUnitarias", "6.PruebasUnitarias", "{0C3FFB97-37E4-4674-AE2D-79802B7C4C70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.Common.Core", "CAR.Parques.Common.Core\CAR.Parques.Common.Core.csproj", "{3EC41E2A-FA36-4217-AC3A-855A8D559C34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.Common.Entities", "CAR.Parques.Common.Entities\CAR.Parques.Common.Entities.csproj", "{DB9A0A70-C499-409A-AE14-08DE042C832E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.Data", "CAR.Parques.Data\CAR.Parques.Data.csproj", "{BCDCD248-4DE9-4E6D-B0F9-9F85E2BAD090}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.DataContract", "CAR.Parques.DataContract\CAR.Parques.DataContract.csproj", "{028F73FE-84A6-4AB3-A255-ED0C7FEC2F8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.Business.Contract", "CAR.Parques.Business.Contract\CAR.Parques.Business.Contract.csproj", "{7ECF2A23-194C-49DA-B79A-BE21BA418FE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.Business.Manager", "CAR.Parques.Business.Manager\CAR.Parques.Business.Manager.csproj", "{136705C5-ED8C-483F-8A89-835C8925CA4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.Ext.Contract", "CAR.Parques.Ext.Contract\CAR.Parques.Ext.Contract.csproj", "{CBA263CE-E9F4-47E9-A54D-036C99CD4C62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.Ext.Service", "CAR.Parques.Ext.Service\CAR.Parques.Ext.Service.csproj", "{E836683F-A720-4899-A8AB-86A3CC8E35A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.Service.WebApi", "CAR.Parques.Service.WebApi\CAR.Parques.Service.WebApi.csproj", "{66964948-CA63-498B-872B-F4EB63C1D445}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.App.WebMvc", "CAR.Parques.App.WebMvc\CAR.Parques.App.WebMvc.csproj", "{ACA51301-4FEE-498B-8CFF-5352723FD802}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Car.Parques.UnitTest.Manager", "Car.Parques.UnitTest.Manager\Car.Parques.UnitTest.Manager.csproj", "{8C92DB39-94A6-4C4A-B834-BF57B9954454}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.Business.Bootstrapper", "CAR.Parques.Business.Bootstrapper\CAR.Parques.Business.Bootstrapper.csproj", "{353554FD-056F-46B0-B7A5-035E0D655883}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.Common.Models", "CAR.Parques.Common.Models\CAR.Parques.Common.Models.csproj", "{284C68A6-83C5-47D8-B3C0-DE6E5FFD57AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.Data.DataTransferObjects", "CAR.Parques.Data.DataTransferObjects\CAR.Parques.Data.DataTransferObjects.csproj", "{0F7F6A6F-41AF-4E3A-89D9-10617CF949E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.UI.Proxy.Bootstrapper", "CAR.Parques.UI.Proxy.Bootstrapper\CAR.Parques.UI.Proxy.Bootstrapper.csproj", "{4FCC9182-2D8A-4E35-8BDA-F55FB8D52BDB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.UI.Proxy.Contracts", "CAR.Parques.UI.Proxy.Contracts\CAR.Parques.UI.Proxy.Contracts.csproj", "{431F0A6B-7A06-4D16-BC56-51941CF49D4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.UI.Proxy", "CAR.Parques.UI.Proxy\CAR.Parques.UI.Proxy.csproj", "{817A346B-160D-48E6-B15B-6A1E38A92874}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAR.Parques.DataOracle", "CAR.Parques.DataOracle\CAR.Parques.DataOracle.csproj", "{124916E5-6760-4451-A202-ACF6D965335D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EC41E2A-FA36-4217-AC3A-855A8D559C34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC41E2A-FA36-4217-AC3A-855A8D559C34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC41E2A-FA36-4217-AC3A-855A8D559C34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC41E2A-FA36-4217-AC3A-855A8D559C34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB9A0A70-C499-409A-AE14-08DE042C832E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB9A0A70-C499-409A-AE14-08DE042C832E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB9A0A70-C499-409A-AE14-08DE042C832E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB9A0A70-C499-409A-AE14-08DE042C832E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCDCD248-4DE9-4E6D-B0F9-9F85E2BAD090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCDCD248-4DE9-4E6D-B0F9-9F85E2BAD090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCDCD248-4DE9-4E6D-B0F9-9F85E2BAD090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCDCD248-4DE9-4E6D-B0F9-9F85E2BAD090}.Release|Any CPU.Build.0 = Release|Any CPU
+		{028F73FE-84A6-4AB3-A255-ED0C7FEC2F8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{028F73FE-84A6-4AB3-A255-ED0C7FEC2F8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{028F73FE-84A6-4AB3-A255-ED0C7FEC2F8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{028F73FE-84A6-4AB3-A255-ED0C7FEC2F8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ECF2A23-194C-49DA-B79A-BE21BA418FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ECF2A23-194C-49DA-B79A-BE21BA418FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ECF2A23-194C-49DA-B79A-BE21BA418FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ECF2A23-194C-49DA-B79A-BE21BA418FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{136705C5-ED8C-483F-8A89-835C8925CA4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{136705C5-ED8C-483F-8A89-835C8925CA4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{136705C5-ED8C-483F-8A89-835C8925CA4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{136705C5-ED8C-483F-8A89-835C8925CA4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBA263CE-E9F4-47E9-A54D-036C99CD4C62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA263CE-E9F4-47E9-A54D-036C99CD4C62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA263CE-E9F4-47E9-A54D-036C99CD4C62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA263CE-E9F4-47E9-A54D-036C99CD4C62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E836683F-A720-4899-A8AB-86A3CC8E35A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E836683F-A720-4899-A8AB-86A3CC8E35A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E836683F-A720-4899-A8AB-86A3CC8E35A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E836683F-A720-4899-A8AB-86A3CC8E35A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66964948-CA63-498B-872B-F4EB63C1D445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66964948-CA63-498B-872B-F4EB63C1D445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66964948-CA63-498B-872B-F4EB63C1D445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66964948-CA63-498B-872B-F4EB63C1D445}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA51301-4FEE-498B-8CFF-5352723FD802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA51301-4FEE-498B-8CFF-5352723FD802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA51301-4FEE-498B-8CFF-5352723FD802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA51301-4FEE-498B-8CFF-5352723FD802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C92DB39-94A6-4C4A-B834-BF57B9954454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C92DB39-94A6-4C4A-B834-BF57B9954454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C92DB39-94A6-4C4A-B834-BF57B9954454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C92DB39-94A6-4C4A-B834-BF57B9954454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{353554FD-056F-46B0-B7A5-035E0D655883}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{353554FD-056F-46B0-B7A5-035E0D655883}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{353554FD-056F-46B0-B7A5-035E0D655883}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{353554FD-056F-46B0-B7A5-035E0D655883}.Release|Any CPU.Build.0 = Release|Any CPU
+		{284C68A6-83C5-47D8-B3C0-DE6E5FFD57AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{284C68A6-83C5-47D8-B3C0-DE6E5FFD57AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{284C68A6-83C5-47D8-B3C0-DE6E5FFD57AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{284C68A6-83C5-47D8-B3C0-DE6E5FFD57AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F7F6A6F-41AF-4E3A-89D9-10617CF949E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F7F6A6F-41AF-4E3A-89D9-10617CF949E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F7F6A6F-41AF-4E3A-89D9-10617CF949E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F7F6A6F-41AF-4E3A-89D9-10617CF949E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FCC9182-2D8A-4E35-8BDA-F55FB8D52BDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FCC9182-2D8A-4E35-8BDA-F55FB8D52BDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FCC9182-2D8A-4E35-8BDA-F55FB8D52BDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FCC9182-2D8A-4E35-8BDA-F55FB8D52BDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{431F0A6B-7A06-4D16-BC56-51941CF49D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{431F0A6B-7A06-4D16-BC56-51941CF49D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{431F0A6B-7A06-4D16-BC56-51941CF49D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{431F0A6B-7A06-4D16-BC56-51941CF49D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{817A346B-160D-48E6-B15B-6A1E38A92874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{817A346B-160D-48E6-B15B-6A1E38A92874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{817A346B-160D-48E6-B15B-6A1E38A92874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{817A346B-160D-48E6-B15B-6A1E38A92874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{124916E5-6760-4451-A202-ACF6D965335D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{124916E5-6760-4451-A202-ACF6D965335D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{124916E5-6760-4451-A202-ACF6D965335D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{124916E5-6760-4451-A202-ACF6D965335D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3EC41E2A-FA36-4217-AC3A-855A8D559C34} = {AA14CB40-142D-4610-A613-4250431E41CB}
+		{DB9A0A70-C499-409A-AE14-08DE042C832E} = {AA14CB40-142D-4610-A613-4250431E41CB}
+		{BCDCD248-4DE9-4E6D-B0F9-9F85E2BAD090} = {8AE147C5-0B67-4B99-ADE1-FA12D835F6C7}
+		{028F73FE-84A6-4AB3-A255-ED0C7FEC2F8B} = {8AE147C5-0B67-4B99-ADE1-FA12D835F6C7}
+		{7ECF2A23-194C-49DA-B79A-BE21BA418FE4} = {BD138F2A-8019-4612-B089-E07DE74663BF}
+		{136705C5-ED8C-483F-8A89-835C8925CA4E} = {BD138F2A-8019-4612-B089-E07DE74663BF}
+		{CBA263CE-E9F4-47E9-A54D-036C99CD4C62} = {43C7B8B1-53A0-4465-A757-C632A6F80A17}
+		{E836683F-A720-4899-A8AB-86A3CC8E35A0} = {43C7B8B1-53A0-4465-A757-C632A6F80A17}
+		{66964948-CA63-498B-872B-F4EB63C1D445} = {588C1B03-2C01-4754-963E-A2CA5B1E9E9F}
+		{ACA51301-4FEE-498B-8CFF-5352723FD802} = {377FE0F0-A023-450F-88CE-332BFDEA60ED}
+		{8C92DB39-94A6-4C4A-B834-BF57B9954454} = {0C3FFB97-37E4-4674-AE2D-79802B7C4C70}
+		{353554FD-056F-46B0-B7A5-035E0D655883} = {BD138F2A-8019-4612-B089-E07DE74663BF}
+		{284C68A6-83C5-47D8-B3C0-DE6E5FFD57AA} = {AA14CB40-142D-4610-A613-4250431E41CB}
+		{0F7F6A6F-41AF-4E3A-89D9-10617CF949E4} = {8AE147C5-0B67-4B99-ADE1-FA12D835F6C7}
+		{4FCC9182-2D8A-4E35-8BDA-F55FB8D52BDB} = {377FE0F0-A023-450F-88CE-332BFDEA60ED}
+		{431F0A6B-7A06-4D16-BC56-51941CF49D4C} = {377FE0F0-A023-450F-88CE-332BFDEA60ED}
+		{817A346B-160D-48E6-B15B-6A1E38A92874} = {377FE0F0-A023-450F-88CE-332BFDEA60ED}
+		{124916E5-6760-4451-A202-ACF6D965335D} = {8AE147C5-0B67-4B99-ADE1-FA12D835F6C7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBE8C26F-2E57-4C64-8249-27567D754333}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 19
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://hernandeveloper.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CAR.Parques.Common.Core\\CAR.Parques.Common.Core.csproj
+		SccProjectTopLevelParentUniqueName1 = CAR.Parques.Solucion.sln
+		SccProjectName1 = CAR.Parques.Common.Core
+		SccLocalPath1 = CAR.Parques.Common.Core
+		SccProjectUniqueName2 = CAR.Parques.Common.Entities\\CAR.Parques.Common.Entities.csproj
+		SccProjectTopLevelParentUniqueName2 = CAR.Parques.Solucion.sln
+		SccProjectName2 = CAR.Parques.Common.Entities
+		SccLocalPath2 = CAR.Parques.Common.Entities
+		SccProjectUniqueName3 = CAR.Parques.Data\\CAR.Parques.Data.csproj
+		SccProjectTopLevelParentUniqueName3 = CAR.Parques.Solucion.sln
+		SccProjectName3 = CAR.Parques.Data
+		SccLocalPath3 = CAR.Parques.Data
+		SccProjectUniqueName4 = CAR.Parques.DataContract\\CAR.Parques.DataContract.csproj
+		SccProjectTopLevelParentUniqueName4 = CAR.Parques.Solucion.sln
+		SccProjectName4 = CAR.Parques.DataContract
+		SccLocalPath4 = CAR.Parques.DataContract
+		SccProjectUniqueName5 = CAR.Parques.Business.Contract\\CAR.Parques.Business.Contract.csproj
+		SccProjectTopLevelParentUniqueName5 = CAR.Parques.Solucion.sln
+		SccProjectName5 = CAR.Parques.Business.Contract
+		SccLocalPath5 = CAR.Parques.Business.Contract
+		SccProjectUniqueName6 = CAR.Parques.Business.Manager\\CAR.Parques.Business.Manager.csproj
+		SccProjectTopLevelParentUniqueName6 = CAR.Parques.Solucion.sln
+		SccProjectName6 = CAR.Parques.Business.Manager
+		SccLocalPath6 = CAR.Parques.Business.Manager
+		SccProjectUniqueName7 = CAR.Parques.Ext.Contract\\CAR.Parques.Ext.Contract.csproj
+		SccProjectTopLevelParentUniqueName7 = CAR.Parques.Solucion.sln
+		SccProjectName7 = CAR.Parques.Ext.Contract
+		SccLocalPath7 = CAR.Parques.Ext.Contract
+		SccProjectUniqueName8 = CAR.Parques.Ext.Service\\CAR.Parques.Ext.Service.csproj
+		SccProjectTopLevelParentUniqueName8 = CAR.Parques.Solucion.sln
+		SccProjectName8 = CAR.Parques.Ext.Service
+		SccLocalPath8 = CAR.Parques.Ext.Service
+		SccProjectUniqueName9 = CAR.Parques.Service.WebApi\\CAR.Parques.Service.WebApi.csproj
+		SccProjectTopLevelParentUniqueName9 = CAR.Parques.Solucion.sln
+		SccProjectName9 = CAR.Parques.Service.WebApi
+		SccLocalPath9 = CAR.Parques.Service.WebApi
+		SccProjectUniqueName10 = CAR.Parques.App.WebMvc\\CAR.Parques.App.WebMvc.csproj
+		SccProjectTopLevelParentUniqueName10 = CAR.Parques.Solucion.sln
+		SccProjectName10 = CAR.Parques.App.WebMvc
+		SccLocalPath10 = CAR.Parques.App.WebMvc
+		SccProjectUniqueName11 = Car.Parques.UnitTest.Manager\\Car.Parques.UnitTest.Manager.csproj
+		SccProjectTopLevelParentUniqueName11 = CAR.Parques.Solucion.sln
+		SccProjectName11 = Car.Parques.UnitTest.Manager
+		SccLocalPath11 = Car.Parques.UnitTest.Manager
+		SccProjectUniqueName12 = CAR.Parques.Business.Bootstrapper\\CAR.Parques.Business.Bootstrapper.csproj
+		SccProjectTopLevelParentUniqueName12 = CAR.Parques.Solucion.sln
+		SccProjectName12 = CAR.Parques.Business.Bootstrapper
+		SccLocalPath12 = CAR.Parques.Business.Bootstrapper
+		SccProjectUniqueName13 = CAR.Parques.Common.Models\\CAR.Parques.Common.Models.csproj
+		SccProjectTopLevelParentUniqueName13 = CAR.Parques.Solucion.sln
+		SccProjectName13 = CAR.Parques.Common.Models
+		SccLocalPath13 = CAR.Parques.Common.Models
+		SccProjectUniqueName14 = CAR.Parques.Data.DataTransferObjects\\CAR.Parques.Data.DataTransferObjects.csproj
+		SccProjectTopLevelParentUniqueName14 = CAR.Parques.Solucion.sln
+		SccProjectName14 = CAR.Parques.Data.DataTransferObjects
+		SccLocalPath14 = CAR.Parques.Data.DataTransferObjects
+		SccProjectUniqueName15 = CAR.Parques.UI.Proxy.Bootstrapper\\CAR.Parques.UI.Proxy.Bootstrapper.csproj
+		SccProjectTopLevelParentUniqueName15 = CAR.Parques.Solucion.sln
+		SccProjectName15 = CAR.Parques.UI.Proxy.Bootstrapper
+		SccLocalPath15 = CAR.Parques.UI.Proxy.Bootstrapper
+		SccProjectUniqueName16 = CAR.Parques.UI.Proxy.Contracts\\CAR.Parques.UI.Proxy.Contracts.csproj
+		SccProjectTopLevelParentUniqueName16 = CAR.Parques.Solucion.sln
+		SccProjectName16 = CAR.Parques.UI.Proxy.Contracts
+		SccLocalPath16 = CAR.Parques.UI.Proxy.Contracts
+		SccProjectUniqueName17 = CAR.Parques.UI.Proxy\\CAR.Parques.UI.Proxy.csproj
+		SccProjectTopLevelParentUniqueName17 = CAR.Parques.Solucion.sln
+		SccProjectName17 = CAR.Parques.UI.Proxy
+		SccLocalPath17 = CAR.Parques.UI.Proxy
+		SccProjectUniqueName18 = CAR.Parques.DataOracle\\CAR.Parques.DataOracle.csproj
+		SccProjectTopLevelParentUniqueName18 = CAR.Parques.Solucion.sln
+		SccProjectName18 = CAR.Parques.DataOracle
+		SccLocalPath18 = CAR.Parques.DataOracle
+	EndGlobalSection
+EndGlobal
