@@ -1,0 +1,61 @@
+<section id="home" class="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="home-thumb">
+          <br/>
+          <div style="margin-top: 10%;visibility: visible;
+          animation-delay: 0.8s;
+          animation-name: fadeInUp">
+            <video src="assets/images/VideoPARQUES.mp4" width="100%" height="480" controls></video>
+          </div>
+          <!-- <div
+            class="wow fadeInUp animated"
+            data-wow-delay="0.8s"
+            style="
+              visibility: visible;
+              animation-delay: 0.8s;
+              animation-name: fadeInUp;">
+              <app-slide class="img-fluid animated fadeInLeft" [slides]="parques" [proporcion]="50"></app-slide>
+            
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <hr />
+
+    <div class="row" *ngIf="noticias.length > 0">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div
+            class="panel-heading"
+            style="background: #3b8fc4; text-align: left"
+          >
+            <span class="subtitulo_box fuente-antonio"> NOTICIAS </span>
+          </div>
+          <div class="grid body-noticias">
+            <div *ngFor="let noticia of noticias">
+              <div
+                class="container-noticia img-fluid animated fadeInLeft"
+                (click)="goToDetail(noticia.ContenidoId)"
+              >
+                <div class="div-img-noticia">
+                  <img src="{{ noticia.urlImage }}" alt="imgNoticia" />
+                </div>
+                <div class="info-noticia">
+                  <span class="category"> Info Parques</span>
+                  <span class="date">
+                    {{formatearFecha(noticia.FechaCreacion)}}</span>
+                </div>
+                <div class="description">
+                  {{ noticia.NombreContenido }}
+                </div>
+              </div>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

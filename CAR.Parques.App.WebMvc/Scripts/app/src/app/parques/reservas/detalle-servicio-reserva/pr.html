@@ -1,0 +1,142 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Demystifying Email Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <table align="center" border="1" cellpadding="0" cellspacing="0" width="600">
+        <tr>
+            <td align="center" bgcolor="#70bbd9" style="padding: 40px 0 30px 0;">
+                <img src="data:image/png;base64,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"
+                    alt="Creating Email Magic" width="300" height="230" style="display: block;" />
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#ffffff" style="padding: 40px 30px 40px 30px;">
+                <table border="1" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td>
+                            Lorem ipsum dolor sit amet!
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 20px 0 30px 0;">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus adipiscing felis, sit
+                            amet blandit ipsum volutpat sed. Morbi porttitor, eget accumsan dictum, nisi libero
+                            ultricies ipsum, in posuere mauris neque at erat.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table border="1" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td width="260" valign="top">
+                                        <table border="1" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <img src="images/left.gif" alt="" width="100%" height="140"
+                                                        style="display: block;" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 25px 0 0 0;">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus
+                                                    adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi
+                                                    porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in
+                                                    posuere mauris neque at erat.
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td style="font-size: 0; line-height: 0;" width="20">
+                                        &nbsp;
+                                    </td>
+                                    <td width="260" valign="top">
+                                        <table border="1" cellpadding="0" cellspacing="0" width="100%">
+                                            <tr>
+                                                <td>
+                                                    <img src="images/right.gif" alt="" width="100%" height="140"
+                                                        style="display: block;" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding: 25px 0 0 0;">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus
+                                                    adipiscing felis, sit amet blandit ipsum volutpat sed. Morbi
+                                                    porttitor, eget accumsan dictum, nisi libero ultricies ipsum, in
+                                                    posuere mauris neque at erat.
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#ee4c50" style="padding: 30px 30px 30px 30px;">
+                <table border="1" cellpadding="0" cellspacing="0" width="100%">
+
+                    <tr>
+
+                        <td width="75%">
+
+                            &reg; Someone, somewhere 2013<br />
+
+                            Unsubscribe to this newsletter instantly
+
+                        </td>
+
+                        <td align="right">
+
+                            <table border="0" cellpadding="0" cellspacing="0">
+
+                                <tr>
+
+                                    <td>
+
+                                        <a href="http://www.twitter.com/">
+
+                                            <img src="images/tw.gif" alt="Twitter" width="38" height="38"
+                                                style="display: block;" border="0" />
+
+                                        </a>
+
+                                    </td>
+
+                                    <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+
+                                    <td>
+
+                                        <a href="http://www.twitter.com/">
+
+                                            <img src="images/fb.gif" alt="Facebook" width="38" height="38"
+                                                style="display: block;" border="0" />
+
+                                        </a>
+
+                                    </td>
+
+                                </tr>
+
+                            </table>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

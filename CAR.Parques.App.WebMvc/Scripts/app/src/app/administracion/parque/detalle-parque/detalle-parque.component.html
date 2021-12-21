@@ -1,0 +1,59 @@
+<div>
+    <mat-dialog-actions>
+        <div style="width: 100%; display: flex;">
+            <div>
+            <h3>Detalle del Parque</h3>
+            </div>
+            <div style="margin-left: auto;">
+            <button mat-icon-button color="warn" mat-dialog-close class="button-icono">
+                <mat-icon>close</mat-icon>
+            </button>
+            </div>
+        </div>
+    </mat-dialog-actions>
+    <br>
+    <mat-dialog-content>
+        <div class="element-form">
+            <img src="{{_parque.urlImagen}}" width="600" height="400"/>
+            <br>
+        </div>
+        <br>
+        <div class="element-form">
+            <label class="label-descripcion">Nombre:</label>
+            <label>{{_parque.NombreParque}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Iniciales:</label>
+            <label>{{_parque.InicialesParque}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Activo:</label>
+            <label>{{_parque.Activo ? 'SI' : 'NO'}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Dirección:</label>
+            <label>{{_parque.Direccion}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Departamento:</label>
+            <label>{{_parque.NombreDepartamento}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Municipio:</label>
+            <label>{{_parque.NombreMunicipio}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Teléfono:</label>
+            <label>{{_parque.Telefono}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Observación:</label>
+            <div class="label-observaciones">
+                <label>{{_parque.Observacion}}</label>
+            </div>
+            
+            
+        </div>
+    </mat-dialog-content>
+    <br>
+</div>

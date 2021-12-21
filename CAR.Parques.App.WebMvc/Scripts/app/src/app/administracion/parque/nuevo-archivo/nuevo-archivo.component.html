@@ -1,0 +1,99 @@
+<div>
+  <h3>Nuevo Archivo</h3>
+  <form [formGroup]="nuevoArchivoForm" (ngSubmit)="guardar()">
+    <mat-dialog-content>
+      <div class="element-form">
+        <label class="label-description">Titulo:</label>
+        <mat-form-field class="new-archivo-form-field">
+          <input
+            type="text"
+            matInput
+            placeholder="Titulo"
+            arial-label="Titulo"
+            formControlName="TituloArchivParque"
+          />
+          <mat-error
+            *ngIf="
+              nuevoArchivoForm.get('TituloArchivParque').hasError('required')
+            "
+            >Titulo del archivo requerido</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div class="element-form">
+        <label class="label-description">Observación:</label>
+        <mat-form-field class="new-archivo-form-field">
+          <textarea
+            matInput
+            placeholder="Observación"
+            arial-label="Observacion"
+            formControlName="Observacion"
+          ></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="element-form">
+        <label class="label-description">Tipo archivo:</label>
+        <mat-form-field class="new-archivo-form-field">
+          <mat-label>Seleccione...</mat-label>
+          <mat-select formControlName="TipoArchivoId">
+            <mat-option
+              *ngFor="let item of _tiposArchivo"
+              [value]="item.TipoArchivoId"
+              >{{ item.NombreTipoArchivo }}</mat-option
+            >
+          </mat-select>
+          <mat-error
+            *ngIf="nuevoArchivoForm.get('TipoArchivoId').hasError('required')"
+            >El tipo de archivo es requerido.</mat-error
+          >
+        </mat-form-field>
+      </div>
+
+      <div class="element-form">
+        <input
+          matInput
+          type="text"
+          placeholder="Seleccione Imagen Principal"
+          disabled
+          value="{{ nombreArchivo }}"
+        />
+        <div class="element-form uploadButton">
+          &nbsp;&nbsp;&nbsp;
+          <mat-icon>attach_file</mat-icon>
+          <label for="fileUpload" style="cursor: pointer"> Cargar </label>
+          <input
+            mat-raised-button
+            type="file"
+            id="fileUpload"
+            accept="image/*"
+            multiple
+            style="display: none"
+            (change)="cargarArchivo($event)"
+          />
+          &nbsp;&nbsp;&nbsp;
+        </div>
+      </div>
+
+      <br />
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button
+        mat-mini-fab
+        color="primary"
+        aria-label="Guardar"
+        type="submit"
+        [disabled]="nuevoArchivoForm.invalid"
+        class="button-icono"
+        formaction=""
+      >
+        <mat-icon>save</mat-icon>
+      </button>
+      <button mat-mini-fab color="warn" aria-label="Cerrar" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-dialog-actions>
+  </form>
+  <form></form>
+</div>

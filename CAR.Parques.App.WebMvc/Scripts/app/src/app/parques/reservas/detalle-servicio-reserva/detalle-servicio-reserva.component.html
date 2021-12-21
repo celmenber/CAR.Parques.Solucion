@@ -1,0 +1,86 @@
+<div>
+    <mat-dialog-actions>
+        <div style="width: 100%; display: flex;">
+            <div>
+            <h2 [ngStyle]="{'color': colorParque,'text-align':'center','font-weight': 'bold'}" style="text-align: center;">Detalle del servicio</h2>
+            </div>
+            <div style="margin-left: auto;">
+            <button mat-icon-button color="warn" mat-dialog-close class="button-icono">
+                <mat-icon>close</mat-icon>
+            </button>
+            </div>
+        </div>
+    </mat-dialog-actions>
+    <br>
+    <mat-dialog-content>                
+            <h3 [ngStyle]="{'color': colorParque,'font-weight': 'bold'}">Nombre Servicio: </h3>       
+            <label class="italic negrita cua">{{_servicioParque.NombreServicioParque}}</label>
+
+            <h3 [ngStyle]="{'color': colorParque,'font-weight': 'bold'}">Descripción: </h3>      
+            <label class="italic negrita cua">{{_servicioParque.DescripcionServicioParque}}</label>        
+        
+            <h3 [ngStyle]="{'color': colorParque,'font-weight': 'bold'}">Precio: </h3>            
+            <label class="italic negrita cua">{{_servicioParque.PrecioServicio}}</label>
+        
+            <h3 [ngStyle]="{'color': colorParque,'font-weight': 'bold'}">Tipo Servicio: </h3>
+            <label class="italic negrita cua">{{_servicioParque.TipoServicio}}</label>
+        <br>        
+        <div class="element-form">
+            <h3 [ngStyle]="{'color': colorParque,'font-weight': 'bold'}">Fechas Reservas:</h3>
+        </div>  
+    <form [formGroup]="ServicioReservaForm" style="text-align: center;">
+        <div *ngIf="_servicioParque.TipoServicioId!==1" class="element-form italic negrita cua">    
+                <mat-form-field appearance="fill">
+                    <mat-label>Fecha Reserva</mat-label>
+                    <input [min]="minDate" [max]="maxDate" matInput [matDatepicker]="picker3" formControlName="FechaReserva">
+                    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                    <mat-datepicker #picker3></mat-datepicker>
+                </mat-form-field>                 
+        </div>
+        <div *ngIf="_servicioParque.TipoServicioId!==1" class="element-form italic negrita cua">
+                <mat-form-field appearance="fill" >
+                    <mat-label>Cantidad</mat-label>
+                    <select matNativeControl required formControlName="cantidad">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="4">5</option>
+                    </select>
+                  </mat-form-field>
+        </div>
+        <div *ngIf="_servicioParque.TipoServicioId==1">
+        <div class="element-form italic negrita cua">
+            <mat-form-field appearance="fill">
+                <mat-label>Fecha Inicio</mat-label>
+                <input [min]="minDate" [max]="maxDate"  matInput [matDatepicker]="picker1" formControlName="FechaInicio">
+                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="element-form italic negrita cua">
+            <mat-form-field appearance="fill">
+                <mat-label>Fecha Fin</mat-label>
+                <input [min]="minDate" [max]="maxDate" matInput [matDatepicker]="picker2" formControlName="FechaFin">
+                <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                <mat-datepicker #picker2></mat-datepicker>
+            </mat-form-field>
+        </div>
+        </div>
+        <div>
+            <small
+              *ngIf="ServicioReservaForm.hasError('validacionFecha')"
+              class="error-message"
+            >
+              *La fecha Inicial no puede ser mayor ó igual a la Fecha Final, por favor seleccione una fecha correcta.
+            </small>
+          </div>
+    </form>
+        <br>
+        <div style="text-align: center;">
+        <label *ngIf="!userAuthenticated" class="error-message">* Para reservar por favor registrate en nuestro sitio web</label>
+        <button *ngIf="userAuthenticated" mat-raised-button color="primary"  (click)="anadirServicio()" [disabled]="ServicioReservaForm.hasError('notValid')">Añadir Servicio</button>         
+        </div>
+    </mat-dialog-content>
+    <br>
+</div>

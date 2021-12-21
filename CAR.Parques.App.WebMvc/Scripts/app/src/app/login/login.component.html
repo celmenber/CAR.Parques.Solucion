@@ -1,0 +1,43 @@
+<div class="login-container">
+    <mat-card class="login-card">
+        <mat-card-content>
+                <form class="formulario" [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+                    <div class="login-control-input">
+                        <mat-icon>mail</mat-icon>
+                        <mat-form-field class="login-form-field">
+                            <input matInput placeholder="E-mail" aria-label="Email" formControlName="email"/>
+                            <mat-error *ngIf="loginForm.get('email').hasError('required')">El E-mail es requerido.</mat-error>
+                            <mat-error *ngIf="loginForm.get('email').hasError('email')">El E-mail no cumple con la estructra correcta.</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="login-control-input">
+                        <mat-icon>vpn_key</mat-icon>
+                        <mat-form-field class="login-form-field">
+                            <input matInput placeholder="Password" aria-label="Password" type="password" formControlName="password">
+                            <mat-error *ngIf="loginForm.get('password').hasError('required')">El password es requerido.</mat-error>
+                            <mat-error *ngIf="loginForm.get('password').hasError('minlength')">El password debe tener minimo 2 caracteres.</mat-error>
+                            <mat-error *ngIf="loginForm.get('password').hasError('maxlength')">El password debe tener maximo 50 caracteres.</mat-error>
+                        </mat-form-field>
+                    </div>
+                    <br/>
+                    <div *ngIf="loginError">
+                        <p class="login-error">{{ loginError }}</p>
+                    </div>
+                    <div>
+                        <button mat-raised-button type="submit" color="primary" [disabled]="loginForm.invalid">Ingresar</button>
+                    </div>
+                    <br>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 linksPequenios">
+                                <a (click)="abrirOlvidoContraseniaDialog()">¿Olvido su contraseña?</a>
+                            </div>
+                            <div class="col-md-6 linksPequenios">
+                                <a (click)="abrirRegistroDialog()">Registrar Usuario</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+        </mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '@swimlane/ngx-datatable/assets/icons.css';
+
+
+.new-modal-dialog {
+    width: 400px;
+}
+
+.label-descripcion {
+    width: 110px;
+    margin-bottom: 0;
+}
+
+.button-icono {
+    display: flex;
+  justify-content: center;
+}
+
+//Modales modulo admin parques
+.nuevo-parque-modal-dialog {
+    width: 500px;
+}
+
+.modal-dialog-grande {
+    width: 600px;
+}
+
+.editar-parque-modal-dialog {
+    width: 650px;
+}
+
+.detalle-parque-modal-dialog {
+    width: 650px; 
+}
+
+.informacion-parque-modal-dialog {
+    width: 1000px;
+}
+
+.uploadButton {
+    border: solid; 
+    border-style: hidden; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    background-color: #FFD740; 
+    margin: 0 auto;
+    height: 35px;;
+}
+
+.exito-notificacion
+{
+    background-color: #B2D742;
+    color: black;
+}
+
+.error-notificacion
+{
+    background-color: #e25248;
+}
+
+.info-notificacion
+{
+    background-color: #487ee2;
+}
+
+.adver-notificacion
+{
+    background-color: #e4e73e;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #B2D742!important;
+}
+
+mat-card img{
+    padding-top: 2px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+}
+
+.mat-mini-fab.mat-success {
+    color: #f0fff3;
+    background-color: #155724;
+}
+
+/* Importing Bootstrap SCSS file. */
+//@import '~bootstrap/scss/bootstrap';

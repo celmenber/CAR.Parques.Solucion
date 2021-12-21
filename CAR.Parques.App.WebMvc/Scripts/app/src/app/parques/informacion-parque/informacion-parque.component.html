@@ -1,0 +1,111 @@
+<div>
+    <mat-dialog-actions>
+        <div style="width: 100%; display: flex;">
+            <div>
+                <h3>Información del Parque</h3>
+            </div>
+            <div style="margin-left: auto;">
+                <button mat-icon-button color="warn" mat-dialog-close class="button-icono">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-dialog-actions>
+    <mat-dialog-content>
+        <br>
+        <div id="global" [ngStyle]="{'background':_parque.Color + '99'}">
+            <!-- Back to top button -->
+            <a id="button"><i class="fas fa-angle-up fa-2x"></i></a>
+            <div class="container-fluid">
+                <div class="tm-site-header tm-mb-1">
+                    <div class="tm-site-name-container tm-bg-color-1" [ngStyle]="{'background':_parque.Color}">
+                        <span class="tm-mb-1" style="text-align: center;">
+                            <h1 class="tm-text-white">{{_parque.NombreParque}}</h1>
+                        </span>
+                    </div>
+                    <div class="tm-nav-container tm-bg-color-8" [ngStyle]="{'background':_parque.Color + '70'}" id="menuInfo">
+                        <nav class="tm-nav" id="tm-nav">
+                            <ul>
+                                <li class="tm-nav-item" *ngFor="let item of _parque.ListadoSeccioneInformacion" (mouseover)="item.Hover=true"
+                                    (mouseleave)="item.Hover=false">
+                                    <a target="_self" class="tm-nav-link" (click)="ScrollIntoView('#' + item.Alias)"
+                                        [ngStyle]="{ backgroundColor: item.Hover==true  ? _parque.Color : _parque.Color + '60' }">
+                                        <span>{{item.Nombre}}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <section>
+                </section>
+                <div *ngFor="let item of _parque.ListadoSeccioneInformacion; let i = index;">
+                    <section class="tm-mb-1" [id]='item.Alias' *ngIf="i%2 === 0 && item.EsFijo === false">
+                        <div class="tm-row tm-about-row">
+                            <div class="tm-section-1-l">
+                                <img [src]="item.ImagenSeccion | safe" 
+                                alt="About image" class="tm-img-responsive">
+                            </div>
+                            <article class="tm-section-1-r tm-bg-color-8">
+                                <div  class="cuerpoInformacion" [innerHTML]="item.Cuerpo | safeHtml"></div>
+                            </article>
+                        </div>
+                    </section>
+                    <section class="tm-mb-1 tm-row tm-services-row" [id]='item.Alias' *ngIf="i%2 !== 0 && item.EsFijo === false">
+                        <div class="tm-section-2-l">
+                            <article class="tm-bg-color-6 tm-box-pad tm-mb-1">
+                                <!--<app-render-html [htmlText]="item.cuerpo"></app-render-html>-->
+                                <div class="cuerpoInformacion" [innerHTML]="item.Cuerpo">
+                                    <!--<span class="tituloInformacion cuerpoInformacion">Horario de funcionamiento del parque:</span><br><span class="cuerpoInformacion">Recuerda que el <strong>primer día hábil de cada semana NO abrimos</strong>. Los demás días, puedes visitarnos de 8:30 AM a 4:00 PM</span><br><span class="tituloInformacion cuerpoInformacion">Horario para alojamiento en cabañas:</span><br><span class="cuerpoInformacion">Ingreso (check in): 3:00 PM</span><br><span class="cuerpoInformacion">Salida o (check out): 1:00 PM</span><br><span class="tituloInformacion cuerpoInformacion">Horario para camping:</span><br><span class="cuerpoInformacion">Martes a jueves: 8:30 AM a 8:00 PM</span><br><span class="cuerpoInformacion">Viernes, sábado y día anterior a festivo: 8:30 AM a 10:00 PM</span><br>-->
+                                </div>
+                            </article>
+                        </div>
+                        <div class="tm-section-2-r">
+                            <img [src]="item.ImagenSeccion | safe"
+                                alt="Services image" class="tm-img-responsive">
+                        </div>
+                    </section>
+                    <section class="tm-bg-color-4 tm-mb-3 tm-services-row" [id]='item.Alias' *ngIf="item.EsFijo === true && item.EsUbicacion === false">
+                        <h2 class="tm-text-white tm-contact-title">{{item.Nombre}}</h2>
+                        <div class="tm-bg-color-white tm-contact-main tm-gallery-outer">
+                            <div class="tm-gallery" id="tm-gallery">
+                                <div class="tm-gallery-item" style="position: relative; float: left;" *ngFor="let linkparque of linksExternos">
+                                    <figure class="effect-bubba">
+                                        <img [src]="linkparque.imagen | safe"
+                                            alt="Gallery item" class="tm-img-responsive" width="250px" height="250px"/>
+                                        <figcaption>
+                                            <h2><span>{{linkparque.titulo}}</span></h2>
+                                            <p>{{linkparque.descripcionCorta}}</p>
+                                            <a [href]="linkparque.linkExterno | safe" target="_blank">Ver más</a>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </section> <!-- Gallery -->
+                    <div *ngIf="item.EsFijo === true && item.EsUbicacion === true">
+                        <section class="tm-bg-color-5 tm-mb-3" [id]='item.id'>
+                            <h2 class="tm-text-white tm-contact-title">{{item.Nombre}}</h2>
+                            <div class="tm-bg-color-white tm-contact-main">
+                                <div class="map-outer">
+                                    <div>
+                                        <iframe width="100%" height="400"
+                                            [src]="_parque.LinkUbicacionGoogle | safe   "
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0" loading="lazy">
+                                            <!--scrolling="no"-->
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div> <!-- .container -->
+        </div>
+        <a id="button" class="show" (click)="ScrollIntoView('#menuInfo')"><mat-icon>arrow_upward</mat-icon></a>
+    </mat-dialog-content>
+    <script src="../../../assets/js/jquery.min.js"></script> <!-- https://jquery.com/download/ -->
+    <script src="../../../assets/js/imagesloaded.pkgd.min.js"></script> <!-- https://imagesloaded.desandro.com/ -->
+    <script src="../../../assets/js/isotope.pkgd.min.js"></script> <!-- https://isotope.metafizzy.co/ -->
+    <script src="../../../assets/js/jquery.singlePageNav.min.js"></script>
+</div>

@@ -1,0 +1,93 @@
+<div class="new-registro-container">
+    <h3>Registro Usuario</h3>
+    <form [formGroup]="nuevoUsuarioForm" (ngSubmit)="guardar()">
+      <mat-dialog-content>
+        <div class="element-form">
+          <label class="label-description">Tipo Documento:</label>
+          <mat-form-field class="new-registro-form-field">
+            <mat-label>Seleccione...</mat-label>
+            <mat-select formControlName="tipoDocumentoId">
+              <mat-option *ngFor="let item of _tipoDocumentos" [value]="item.TipoDocumentoId">{{item.NombreTipoDocumento}}</mat-option>
+            </mat-select>
+            <mat-error *ngIf="nuevoUsuarioForm.get('tipoDocumentoId').hasError('required')">El tipo documento es requerido.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="element-form">
+          <label class="label-description">Documento:</label>
+          <mat-form-field class="new-customer-form-field">
+            <input type="text" matInput placeholder="Documento" aria-label="Documento" formControlName="documento" />
+            <mat-error *ngIf="nuevoUsuarioForm.get('documento').hasError('required')">El documento es requerido.</mat-error>
+            <mat-error *ngIf="nuevoUsuarioForm.get('documento').hasError('noEspacios')">No puede contenter espacios.</mat-error>
+            <mat-error *ngIf="nuevoUsuarioForm.get('documento').hasError('soloNumeros')">Solo se admiten números.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="element-form">
+          <label class="label-description">Primer Nombre:</label>
+          <mat-form-field class="new-customer-form-field">
+            <input type="text" matInput placeholder="Primer Nombre" aria-label="Primer Nombre" formControlName="nombre1" />
+            <mat-error *ngIf="nuevoUsuarioForm.get('nombre1').hasError('required')">El primer nombre es requerido.</mat-error>
+            <mat-error *ngIf="nuevoUsuarioForm.get('nombre1').hasError('noEspacios')">No puede contenter espacios.</mat-error>
+            <mat-error *ngIf="nuevoUsuarioForm.get('nombre1').hasError('soloLetras')">Solo se admiten letras.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="element-form">
+          <label class="label-description">Segundo Nombre:</label>
+          <mat-form-field class="new-customer-form-field">
+            <input type="text" matInput placeholder="Segundo Nombre" aria-label="Segundo Nombre" formControlName="nombre2" />
+            <mat-error *ngIf="nuevoUsuarioForm.get('nombre2').hasError('noEspacios')">No puede contenter espacios.</mat-error>
+            <mat-error *ngIf="nuevoUsuarioForm.get('nombre2').hasError('soloLetras')">Solo se admiten letras.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="element-form">
+          <label class="label-description">Primer Apellido:</label>
+          <mat-form-field class="new-customer-form-field">
+            <input type="text" matInput placeholder="Primer Apellido" aria-label="Primer Apellido" formControlName="apellido1" />
+            <mat-error *ngIf="nuevoUsuarioForm.get('apellido1').hasError('required')">El primer apellido es requerido.</mat-error>
+            <mat-error *ngIf="nuevoUsuarioForm.get('apellido1').hasError('noEspacios')">No puede contenter espacios.</mat-error>
+            <mat-error *ngIf="nuevoUsuarioForm.get('apellido1').hasError('soloLetras')">Solo se admiten letras.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="element-form">
+          <label class="label-description">Segundo Apellido:</label>
+          <mat-form-field class="new-customer-form-field">
+            <input type="text" matInput placeholder="Segundo Apellido" aria-label="Segundo Apellido" formControlName="apellido2" />
+            <mat-error *ngIf="nuevoUsuarioForm.get('apellido2').hasError('noEspacios')">No puede contenter espacios.</mat-error>
+            <mat-error *ngIf="nuevoUsuarioForm.get('apellido2').hasError('soloLetras')">Solo se admiten letras.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="element-form">
+          <label class="label-description">Correo:</label>
+          <mat-form-field class="new-customer-form-field">
+            <input type="text" matInput placeholder="correo@dominio.com" aria-label="Correo" formControlName="email" />
+            <mat-error *ngIf="nuevoUsuarioForm.get('email').hasError('required')">El correo es requerido.</mat-error>
+            <mat-error *ngIf="nuevoUsuarioForm.get('email').hasError('email')">El correo no tiene la estructura correcta.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="element-form">
+          <label class="label-description">Contraseña:</label>
+          <mat-form-field class="new-customer-form-field">
+            <input type="password" matInput placeholder="Contraseña" aria-label="Contraseña" formControlName="passwordUsuario" />
+            <mat-error *ngIf="nuevoUsuarioForm.get('passwordUsuario').hasError('required')">La contraseña es requerida.</mat-error>
+            <mat-error *ngIf="nuevoUsuarioForm.get('passwordUsuario').hasError('noEspacios')">No puede contenter espacios.</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="element-form">
+          <label class="label-description">Confirmar Contraseña:</label>
+          <mat-form-field class="new-customer-form-field">
+            <input type="password" matInput placeholder="Contraseña" aria-label="Contraseña" formControlName="passwordUsuarioConfirma" />
+            <mat-error *ngIf="nuevoUsuarioForm.get('passwordUsuarioConfirma').hasError('notEquivalent')">Las credenciales no coinciden.</mat-error>
+          </mat-form-field>
+        </div>
+      </mat-dialog-content>
+      <mat-dialog-actions>
+        <button mat-mini-fab color="primary" aria-label="Guardar" type="submit" [disabled]="nuevoUsuarioForm.invalid" class="button-icono" formaction="">
+            <mat-icon>save</mat-icon>
+        </button>
+        <button mat-mini-fab color="warn" aria-label="Cerrar" mat-dialog-close>
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-dialog-actions>
+      <br>
+    </form>
+  </div>
+  

@@ -1,0 +1,113 @@
+<div class="container">
+  <div class="nuevoParque">
+    <button mat-mini-fab color="primary" (click)="openDialog()" class="button">
+      <mat-icon>add</mat-icon>
+    </button>
+    &nbsp;
+    <b>Nuevo Archivo</b>
+  </div>
+  <br />
+  <div>
+    <mat-carousel
+      timings="250ms ease-in"
+      [autoplay]="true"
+      interval="5000"
+      color="accent"
+      maxWidth="auto"
+      proportion="50"
+      slides="5"
+      [loop]="true"
+      [hideArrows]="false"
+      [hideIndicators]="false"
+      [useKeyboard]="true"
+      [useMouseWheel]="false"
+      orientation="ltr"
+    >
+      <mat-carousel-slide
+        #matCarouselSlide
+        *ngFor="let slide of slides"
+        [image]="slide.image"
+        overlayColor="#00000040"
+        [hideOverlay]="false"
+      >
+        <div
+          style="
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding-bottom: 30px;
+          "
+        >
+          <button
+            mat-mini-fab
+            matTooltip="Eliminar Imagen"
+            color="warn"
+            (click)="eliminarArchivo(slide.ArchivoParqueId, 3)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </mat-carousel-slide>
+    </mat-carousel>
+  </div>
+  <br />
+  <div>
+    <div class="row" *ngIf="archivosPdf.length > 0">
+      <div class="col-sm-4">
+        <div class="col-sm-4">
+          <b style="font-size: 15px"> Archivos </b>
+        </div>
+      </div>
+    </div>
+    <div
+      class="row"
+      *ngFor="let item of archivosPdf"
+      ng-if="archivosPdf.length > 0"
+    >
+      <div class="col-sm-5">
+        <div class="col-sm-5">
+          <p style="color: black">{{ item.TituloArchivParque }}.pdf</p>
+        </div>
+        <div class="col-sm-2">
+          <a
+            [href]="sanitize(item.rutaArchivoParque)"
+            download="{{ item.TituloArchivParque }}.pdf"
+          >
+            <mat-icon style="font-size: 45px">cloud_download</mat-icon>
+          </a>
+        </div>
+        <div class="col-sm-1">
+          <button
+            mat-mini-fab
+            color="warn"
+            class="button"
+            (click)="eliminarArchivo(item.ArchivoParqueId, 2)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- <table>
+           
+            <tr *ngFor="let item of archivosPdf">
+                <td>
+                    <label>{{ item.TituloArchivParque }}</label>
+                </td>
+                <td>
+                    <a [href]="sanitize(item.rutaArchivoParque)" download='{{ item.TituloArchivParque }}.pdf'>
+                        <mat-icon>cloud_download</mat-icon>
+                    </a>
+                </td>
+                <td>
+                    <button mat-mini-fab color="warn" class="button" (click)="eliminarArchivo(item.ArchivoParqueId)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </td>
+            </tr>
+        </table> -->
+  </div>
+</div>

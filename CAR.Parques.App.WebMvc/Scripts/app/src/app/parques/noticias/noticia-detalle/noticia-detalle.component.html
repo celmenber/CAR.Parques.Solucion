@@ -1,0 +1,14 @@
+<div class="container">
+  <div>
+    <span class="category">Info Parque</span>
+    <div class="titulo">{{ noticia.NombreContenido }}</div>
+    <span class="date">{{ formatearFecha(noticia.fechaCreacion) }}</span>
+    <hr />
+  </div>
+  <div class="img-content-noticia">
+    <img src="{{ noticia.urlImage }}" alt="imgNoticia" />
+  </div>
+  <div class="container-content-noticia">
+    <div class="content-noticia" [innerHTML]="noticia.CuerpoContenido"></div>
+  </div>
+</div>

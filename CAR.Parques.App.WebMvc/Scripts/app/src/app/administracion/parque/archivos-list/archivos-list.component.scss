@@ -1,0 +1,42 @@
+.parque-container
+{
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-top: 3%;
+    @media (max-width: 767px) {
+        padding-top: 6%;
+    }
+}
+
+.nuevoParque
+{
+    margin-left: 1%;
+    @media (max-width: 767px){
+        padding-bottom: 10px;
+    }
+}
+
+.parque-card
+{
+    display: inline-block;
+    margin:1.1%;
+    width: 31%;
+    @media (max-width: 767px) {
+        width: 98%;
+    }
+}
+
+ul[rn-carousel] {
+    > li {
+      position: relative;
+      margin-left: -100%;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  ul {
+    height:300px;
+    width: 600px;
+    background:blue;
+}

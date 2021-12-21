@@ -1,0 +1,17 @@
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\Car.Parques.UnitTest.Manager.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\Car.Parques.UnitTest.Manager.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\obj\Debug\Car.Parques.UnitTest.Manager.csprojAssemblyReference.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\obj\Debug\Car.Parques.UnitTest.Manager.csproj.CoreCompileInputs.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\obj\Debug\Car.Parques.UnitTest.Manager.csproj.CopyComplete
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\obj\Debug\Car.Parques.UnitTest.Manager.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\Car.Parques.UnitTest.Manager\obj\Debug\Car.Parques.UnitTest.Manager.pdb

@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Managers\Base\ManagerBase.cs" />
+    <Compile Include="Managers\Extensiones\MenuEOExtension.cs" />
     <Compile Include="Managers\GestorContenido\GestorContenidoManager.cs" />
     <Compile Include="Managers\Log\LogManager.cs" />
     <Compile Include="Managers\Parametricos\DepartamentoManager.cs" />

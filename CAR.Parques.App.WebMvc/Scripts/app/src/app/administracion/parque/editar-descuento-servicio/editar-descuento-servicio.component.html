@@ -1,0 +1,32 @@
+<div>
+    <h3>Editar Descuento Servicio</h3>
+    <form [formGroup]="editarDescuentoServicioParqueForm" (ngSubmit)="guardar()">
+        <mat-dialog-content>
+            <div class="element-form">
+                <label class="label-description">Tipo Funcionario:</label>
+                <mat-form-field class="new-servicio-parque-form-field">
+                    <mat-label>Seleccione...</mat-label>
+                    <mat-select formControlName="TipoUsuarioId">
+                        <mat-option *ngFor="let item of _tipoUsuario" [value]="item.TipoUsuarioId">{{item.NombreTipoUsuario}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="editarDescuentoServicioParqueForm.get('TipoUsuarioId').hasError('required')">El tipo de usuario es requerido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Descuento:</label>
+                <mat-form-field class="new-servicio-parque-form-field">
+                    <input type="number" matInput placeholder="Descuento" arial-label="Descuento" formControlName="Descuento"/>
+                    <mat-error *ngIf="editarDescuentoServicioParqueForm.get('Descuento').hasError('required')">Impuesto requerido.</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+            <button mat-mini-fab color="primary" aria-label="Guardar" type="submit" [disabled]="editarDescuentoServicioParqueForm.invalid" class="button-icono" formaction="">
+                <mat-icon>save</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" aria-label="Cerrar" mat-dialog-close>
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-dialog-actions>
+    </form>
+</div>

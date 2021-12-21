@@ -1,0 +1,11 @@
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.UI.Proxy.Contracts\bin\Debug\CAR.Parques.UI.Proxy.Contracts.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.UI.Proxy.Contracts\bin\Debug\CAR.Parques.UI.Proxy.Contracts.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.UI.Proxy.Contracts\bin\Debug\CAR.Parques.Common.Entities.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.UI.Proxy.Contracts\bin\Debug\CAR.Parques.Common.Models.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.UI.Proxy.Contracts\bin\Debug\CAR.Parques.Common.Entities.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.UI.Proxy.Contracts\bin\Debug\CAR.Parques.Common.Models.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.UI.Proxy.Contracts\obj\Debug\CAR.Parques.UI.Proxy.Contracts.csprojAssemblyReference.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.UI.Proxy.Contracts\obj\Debug\CAR.Parques.UI.Proxy.Contracts.csproj.CoreCompileInputs.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.UI.Proxy.Contracts\obj\Debug\CAR.Parques.UI.Proxy.Contracts.csproj.CopyComplete
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.UI.Proxy.Contracts\obj\Debug\CAR.Parques.UI.Proxy.Contracts.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.UI.Proxy.Contracts\obj\Debug\CAR.Parques.UI.Proxy.Contracts.pdb

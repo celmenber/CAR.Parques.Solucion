@@ -1,0 +1,43 @@
+.ubicacionUsuario{
+    padding-top: 5px;
+}
+
+@media (max-width: 767px) {
+    .ubicacionUsuario {
+            display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .ubicacionUsuario {
+            display: inline;
+    }
+}
+
+.ubicacionSimpleUsuario div{
+    background-color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+    .ubicacionSimpleUsuario {
+            display: inline;
+    }
+}
+
+@media (min-width: 768px) {
+    .ubicacionSimpleUsuario {
+            display: none;
+    }
+}
+
+.tamanioInfoUsuaio{
+    width: 200px; 
+    text-align: right; 
+    padding-right: 25px; 
+    padding-left: 25px; 
+    padding-bottom: 10px;
+}
+
+.menuAdmin{
+    background-color: #DCEDA9;
+}

@@ -1,0 +1,11 @@
+.headerNew {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.headerNew .title {
+  position: absolute;
+  bottom: 0px;
+}

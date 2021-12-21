@@ -1,0 +1,55 @@
+<div class="container">
+    <div>
+        <div class="panel panel-default wow fadeInLeft animated">
+            <div style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInUp;">
+                <app-slide [slides]="slides" [proporcion]="50"></app-slide>
+            </div>
+            <br>
+            <div style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                <div class="panel-heading" style="background:#3b8fc4;text-align:left;">
+                    <span class="subtitulo_box fuente-antonio">
+                        PARQUES ECOTURISTICOS
+                    </span>
+                </div>
+                <div class="panel-body fuente-antonio" style="align-items: center; ">
+                    <div *ngFor="let item of parques" class="parque-card">
+                        <mat-card [ngStyle]="{'background-color': item.Color}">
+                            <mat-card-header >
+                                <div style="height: 80px;">
+                                <mat-card-title>{{ item.NombreParque.toUpperCase() }}</mat-card-title>
+                                <mat-card-subtitle>{{ item.Direccion }}</mat-card-subtitle>
+                                </div>
+                                <br>
+                            </mat-card-header>    
+                            <img mat-card-image src="{{ item.urlImagen }}" width="342" height="200">
+                            <mat-card-content>
+                                <p style="color:black;">
+                                    <!-- <b>Código Corto:</b> {{ item.InicialesParque }} <br> -->
+                                    <b>Telefono:</b> {{ item.Telefono }} <br>
+                                    <b>Activo:</b> {{item.Activo === true ? 'SI' : 'NO' }} <br>
+                                    <b>Municipio:</b> {{item.NombreMunicipio}} <br>
+                                    <b>Departamento:</b> {{item.NombreDepartamento}}
+                                </p>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <button mat-mini-fab matTooltip="Reservar" color="primary" [routerLink]="['/parques/detallereserva', item.ParqueId]">
+                                    <mat-icon>calendar_today</mat-icon>                       
+                                </button>
+                                &nbsp;                            
+                                <button mat-mini-fab matTooltip="Detalle Parque" color="accent" (click)="verParque(item.ParqueId)">
+                                    <mat-icon>preview</mat-icon>
+                                </button>                            
+                                &nbsp;
+                                <button mat-mini-fab matTooltip="Información Parque" color="basic" (click)="verInformacion(item)">
+                                    <mat-icon>info</mat-icon>
+                                </button>                            
+                                &nbsp;
+                            </mat-card-actions>
+                        </mat-card>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Business.Contract\bin\Release\CAR.Parques.Business.Contract.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Business.Contract\bin\Release\CAR.Parques.Business.Contract.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Business.Contract\bin\Release\CAR.Parques.Common.Entities.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Business.Contract\bin\Release\CAR.Parques.Common.Models.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Business.Contract\bin\Release\CAR.Parques.Common.Entities.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Business.Contract\bin\Release\CAR.Parques.Common.Models.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Business.Contract\obj\Release\CAR.Parques.Business.Contract.csprojAssemblyReference.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Business.Contract\obj\Release\CAR.Parques.Business.Contract.csproj.CoreCompileInputs.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Business.Contract\obj\Release\CAR.Parques.Business.Contract.csproj.CopyComplete
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Business.Contract\obj\Release\CAR.Parques.Business.Contract.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Business.Contract\obj\Release\CAR.Parques.Business.Contract.pdb

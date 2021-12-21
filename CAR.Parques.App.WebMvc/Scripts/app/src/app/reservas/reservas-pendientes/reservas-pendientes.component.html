@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading" style="background: #3b8fc4; text-align: left">
+      <span class="subtitulo_box fuente-antonio"> RESERVAS PENDIENTES </span>
+    </div>
+
+    <br />
+    <div class="panel-body">
+      <span class="subtitulo_box fuente-antonio" style="color: #000000">
+        {{ usuarioReserva }}
+      </span>
+    </div>
+    <app-grilla
+      #tableView
+      [items]="listadoreservaDetalle"
+      [columns]="columns"
+      [detailTemplate]="detailTemplate"
+    >
+    </app-grilla>
+    <ng-template
+      let-row="row"
+      let-expanded="expanded"
+      ngx-datatable-cell-template
+      #reservaIdTemplate
+    >
+      <div *ngIf="row.ListadoDetalleReserva.length > 0" class="row-container">
+        <div
+          *ngIf="expanded"
+          class="caret-container not-expanded"
+          (click)="toggleExpandRow(row)"
+        >
+          <i><mat-icon>expand_less</mat-icon></i>
+        </div>
+        <div
+          *ngIf="!expanded"
+          class="caret-container expanded"
+          (click)="toggleExpandRow(row)"
+        >
+          <i><mat-icon>expand_more</mat-icon></i>
+        </div>
+      </div>
+      <div *ngIf="row.ListadoDetalleReserva.length == 0" class="row-container;subtitulo_box fuente-antonio">
+         NO TIENES RESERVAS PENDIENTES
+      </div>
+    </ng-template>
+    <ng-template let-row="row" ngx-datatable-cell-template #AccionesTemplate>
+      <button
+        mat-icon-button
+        matTooltip="Cargar comprobante"
+        color="accent"
+        (click)="cargarComprobanteServicio(row.ReservaId)"
+      >
+        <mat-icon>attachment</mat-icon>
+      </button>
+    </ng-template>
+    <ng-template #detailTemplate let-row="row">
+      <app-grilla
+        class="detalle-table"
+        [items]="row.ListadoDetalleReserva"
+        [columns]="detailColumns"
+      >
+      </app-grilla>
+    </ng-template>
+  </div>
+</div>

@@ -219,8 +219,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -241,6 +239,31 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Scripts\app\src\assets\images\footer\pie_de_pagina2.png" />
+    <Content Include="Scripts\app\src\assets\images\iconos\favicon.ico" />
+    <Content Include="Scripts\app\src\assets\images\iconos\iteraccion\compare_arrows-white-18dp.svg" />
+    <Content Include="Scripts\app\src\assets\images\iconos\iteraccion\keyboard_arrow_down-24px.svg" />
+    <Content Include="Scripts\app\src\assets\images\iconos\iteraccion\keyboard_arrow_down-white-18dp.svg" />
+    <Content Include="Scripts\app\src\assets\images\iconos\iteraccion\keyboard_arrow_up-24px.svg" />
+    <Content Include="Scripts\app\src\assets\images\iconos\iteraccion\keyboard_arrow_up-white-18dp.svg" />
+    <Content Include="Scripts\app\src\assets\images\linea_superior.jpg" />
+    <Content Include="Scripts\app\src\assets\images\logo\Cursos de Ley_ Curso de Ley_ FATCA y CRS.pdf" />
+    <Content Include="Scripts\app\src\assets\images\logo\Cursos de Ley_ Curso de Ley_ Seguridad Vial.pdf" />
+    <Content Include="Scripts\app\src\assets\images\logo\Cursos de Ley_ Curso de Ley_ SST.pdf" />
+    <Content Include="Scripts\app\src\assets\images\logo\LOGOCAR.png" />
+    <Content Include="Scripts\app\src\assets\images\logo\LogoCARLoad.png" />
+    <Content Include="Scripts\app\src\assets\images\logo\logo_parques.png" />
+    <Content Include="Scripts\app\src\assets\images\logo\logo_parques2.png" />
+    <Content Include="Scripts\app\src\assets\images\logo\Megaproyecto_Parques.png" />
+    <Content Include="Scripts\app\src\assets\images\logo\Recaudo Cartera Créditos Davivienda Fin Pago.pdf" />
+    <Content Include="Scripts\app\src\assets\images\parques\inicio\19930Vista de la laguna desde el mirador.jpg" />
+    <Content Include="Scripts\app\src\assets\images\parques\inicio\NEUSA.jpg" />
+    <Content Include="Scripts\app\src\assets\images\parques\inicio\PUENTE_SOPO_LAGO2.jpg" />
+    <Content Include="Scripts\app\src\assets\images\sellos_calidad.jpg" />
+    <Content Include="Scripts\app\src\assets\images\siluetarboles.png" />
+    <Content Include="Scripts\app\src\assets\images\VideoPARQUES.mp4" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -263,11 +286,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="Scripts\app\src\app\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -295,8 +318,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
-    <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CAR.Parques.Common.Core\CAR.Parques.Common.Core.csproj">

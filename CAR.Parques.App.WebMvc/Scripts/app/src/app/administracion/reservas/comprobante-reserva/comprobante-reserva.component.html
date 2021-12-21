@@ -1,0 +1,30 @@
+<div>
+    <div class="row">
+        <div class="col-md-10"><h3>Comprobante de pago</h3></div>
+        <div class="col-md-2">
+            <button mat-icon-button color="warn" aria-label="Cerrar" mat-dialog-close value="Rechazar">
+                <mat-icon>close</mat-icon>
+            </button>
+        </div>
+    </div>
+    <!--<form [formGroup]="editarParqueForm" (ngSubmit)="guardar()">-->
+        <mat-dialog-content>
+            <div class="element-form">
+                <!-- <img src="https://www.muypymes.com/wp-content/uploads/2019/03/facturacompleta-viviralmaximo-660x330.png" width="600" height="400"/> -->
+                <img *ngIf="comprobante.imagenComprobante != ''" src="{{ comprobante.imagenComprobante }}" width="600" height="400"/>
+                <br>
+            </div>
+            <br>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+            <button mat-raised-button color="primary" aria-label="Guardar" type="submit" class="button-icono" value="Aprobar" (click)="aprobarReserva()">
+                Aprobar
+                <mat-icon>done</mat-icon>
+            </button>
+            <button mat-raised-button color="warn" aria-label="Cerrar" mat-dialog-close value="Rechazar" (click)="rechazarReserva()">
+                Rechazar
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-dialog-actions>
+    <!--</form>-->
+</div>

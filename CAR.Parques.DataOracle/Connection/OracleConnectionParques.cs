@@ -1,6 +1,6 @@
 ﻿namespace CAR.Parques.DataOracle.Connection
 {
-    using Oracle.DataAccess.Client;
+    //using Oracle.DataAccess.Client;
     using System.Configuration;
 
     public class OracleConnectionParques
@@ -12,11 +12,11 @@
             strConexion = ConfigurationManager.ConnectionStrings["ConStringBDOracle"].ConnectionString;
         }
 
-        public OracleConnection GenerarConexion()
-        {
-            OracleConnection sqlConn;
-            sqlConn = new OracleConnection(strConexion);
-            return sqlConn;
-        }
+        //public OracleConnection GenerarConexion()
+        //{
+        //    OracleConnection sqlConn;
+        //    sqlConn = new OracleConnection(strConexion);
+        //    return sqlConn;
+        //}
     }
 }

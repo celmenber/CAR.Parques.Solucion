@@ -1,0 +1,101 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading" style="background:#3b8fc4;text-align:left;">
+            <span class="subtitulo_box fuente-antonio">
+                RESERVAS
+            </span>
+        </div>
+        <form [formGroup]="adminReservaForm" style="padding-left: 50px; padding-bottom: 20px;">
+            <div class="nuevoParque">
+                <div class="element-form">
+                    <label class="label-description">Estado Reserva:</label>
+                    <mat-form-field class="editar-parque-form-field">
+                        <mat-label>Seleccione...</mat-label>
+                        <mat-select formControlName="EstadoReservaId">
+                            <mat-option *ngFor="let itemEstado of _estadoReserva" [value]="itemEstado.EstadoReservaId">{{itemEstado.NombreEstadoReserva}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="element-form">
+                    <label class="label-description">Parques:</label>
+                    <mat-form-field class="editar-parque-form-field">
+                        <mat-label>Seleccione...</mat-label>
+                        <mat-select formControlName="ParqueId">
+                            <mat-option *ngFor="let item of parques" [value]="item.ParqueId">{{item.NombreParque}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="element-form">
+                    <label class="label-description">Fecha Inicio:</label>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Fecha Inicio</mat-label>
+                        <input matInput [matDatepicker]="picker1" formControlName="FechaInicio">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                    </mat-form-field>
+                    <!--<mat-form-field class="editar-parque-form-field">
+                        <input type="text" matInput placeholder="Fecha Inicio" arial-label="Fecha Inicio" formControlName="FechaInicio"/>
+                    </mat-form-field>-->
+                </div>
+                <div class="element-form">
+                    <label class="label-description">Fecha Fin:</label>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Fecha Fin</mat-label>
+                        <input matInput [matDatepicker]="picker2" formControlName="FechaFin" >
+                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                        <mat-datepicker #picker2></mat-datepicker>
+                    </mat-form-field>
+                    <!--<mat-form-field class="editar-parque-form-field">
+                        <input type="text" matInput placeholder="Fecha Fin" arial-label="Fecha Fin" formControlName="FechaFin"/>
+                    </mat-form-field>-->
+                </div>
+                <button mat-mini-fab color="primary" (click)="buscarReservas()" class="button">
+                    <mat-icon>search</mat-icon>
+                </button>   
+            </div>
+        </form>
+       <app-grilla #tableView [items]="listadoreservaDetalle" [columns]="columns" [detailTemplate]="detailTemplate">
+       </app-grilla>
+       <ng-template let-row="row" let-expanded="expanded" ngx-datatable-cell-template #reservaIdTemplate>
+           <div *ngIf="row.ListadoDetalleReserva.length > 0" class="row-container">
+                <div *ngIf="expanded" class="caret-container not-expanded" (click)="toggleExpandRow(row)">
+                    <i><mat-icon>expand_less</mat-icon></i>
+                </div>
+                <div *ngIf="!expanded" class="caret-container expanded" (click)="toggleExpandRow(row)">
+                    <i><mat-icon>expand_more</mat-icon></i>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template let-row="row"  ngx-datatable-cell-template #AccionesTemplate>
+            <!--*ngIf="row.EstadoId ==2"-->
+            <button *ngIf="row.EstadoId == 2" mat-icon-button matTooltip="Detalle Parque" color="accent" (click)="verComprobanteServicio(row.ReservaId)">
+                <mat-icon>preview</mat-icon>
+            </button>
+            <!--<button mat-icon-button matTooltip="Adm. Descuentos" color="warn" (click)="nuevoDescuentoServicioParque(row.ServicioParqueId)">
+                <mat-icon>money_off</mat-icon>
+            </button>-->
+        </ng-template>
+        <!--<ng-template *ngIf="!mobile" let-row="row" ngx-datatable-cell-template #DescripcionTemplate>
+            {{ row.DescripcionServicioParque }}
+        </ng-template>
+        <ng-template *ngIf="!mobile" let-row="row" ngx-datatable-cell-template #ImpuestoTemplate>
+            {{ row.ImpuestoServicio }}
+        </ng-template>
+        <ng-template *ngIf="!mobile" let-row="row" ngx-datatable-cell-template #TipoTemplate>
+            {{ row.TipoServicio }}
+        </ng-template>-->
+        <ng-template #detailTemplate let-row="row">                
+            <app-grilla class="detalle-table" [items]="row.ListadoDetalleReserva" [columns]="detailColumns">
+            </app-grilla>
+        </ng-template>
+        <!--<ng-template let-row="row" ngx-datatable-cell-template #AccionesDescuentoTemplate>-->
+            <!--<button mat-icon-button matTooltip="Editar Parque" color="primary" (click)="editarDescuentoServicio(row.DescuentoTipoUsuarioId)">
+                <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button matTooltip="Eliminar Parque" color="warn" (click)="eliminarDescuentoServicioParque(row.DescuentoTipoUsuarioId)">
+                <mat-icon>delete</mat-icon>
+            </button>-->
+        <!--</ng-template>-->
+    </div>
+    <div>
+</div>

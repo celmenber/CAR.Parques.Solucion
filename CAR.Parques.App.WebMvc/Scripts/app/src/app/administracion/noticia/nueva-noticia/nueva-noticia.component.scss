@@ -1,0 +1,46 @@
+.headerNew {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.headerNew .title {
+  position: absolute;
+  bottom: 0px;
+}
+
+.editor {
+  border: 1px solid black;
+}
+
+.titleEditor {
+  margin-right: 5px;
+}
+.headerContentNew {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerContentNew label {
+  margin-right: 10px;
+}
+
+.lblCargar {
+  width: min-content !important;
+}
+
+.uploadButton {
+  margin: 0;
+  width: 80px;
+}
+
+.row-upload {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.error-message {
+  color: #ff0000;
+}

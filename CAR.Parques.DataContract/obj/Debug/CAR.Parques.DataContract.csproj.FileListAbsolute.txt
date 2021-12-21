@@ -1,0 +1,11 @@
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataContract\bin\Debug\CAR.Parques.DataContract.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataContract\bin\Debug\CAR.Parques.DataContract.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataContract\bin\Debug\CAR.Parques.Common.Entities.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataContract\bin\Debug\CAR.Parques.Data.DataTransferObjects.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataContract\bin\Debug\CAR.Parques.Common.Entities.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataContract\bin\Debug\CAR.Parques.Data.DataTransferObjects.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataContract\obj\Debug\CAR.Parques.DataContract.csprojAssemblyReference.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataContract\obj\Debug\CAR.Parques.DataContract.csproj.CoreCompileInputs.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataContract\obj\Debug\CAR.Parques.DataContract.csproj.CopyComplete
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataContract\obj\Debug\CAR.Parques.DataContract.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataContract\obj\Debug\CAR.Parques.DataContract.pdb

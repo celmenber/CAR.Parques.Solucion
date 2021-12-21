@@ -49,6 +49,18 @@
             return Post<ResultadoEjecucion<int>>(archivoReserva);
         }
 
+        public ResultadoEjecucion<ResultadoEjecucion<ArchivoReservaModel>> ObtenerArchivoComprobanteReserva(int reservaId)
+        {
+            this.AsociarServicio($"{nombreApi}ArchivoReserva/{reservaId}", string.Empty);
+            return Get<ResultadoEjecucion<ArchivoReservaModel>>();
+        }
+
+        public ResultadoEjecucion<ResultadoEjecucion<bool>> ActualizarEstadoReserva(ReservaModel reserva)
+        {            
+            this.AsociarServicio($"{nombreApi}EstadoReserva", string.Empty);
+            return Put<ResultadoEjecucion<bool>>(reserva);
+        }
+
         public ResultadoEjecucion<ResultadoEjecucion<int>> ValidarPreReserva(DetalleReservaModel detalleReserva)
         {
             this.AsociarServicio($"{nombreApi}ValidarPreReserva", string.Empty);

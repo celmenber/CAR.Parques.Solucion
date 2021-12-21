@@ -1,0 +1,27 @@
+.parque-container
+{
+    margin-right: 1%;
+    margin-left: 1%;
+    padding-top: 3%;
+    @media (max-width: 767px) {
+        padding-top: 6%;
+    }
+}
+
+.nuevoParque
+{
+    margin-left: 1%;
+    @media (max-width: 767px){
+        padding-bottom: 10px;
+    }
+}
+
+.parque-card
+{
+    display: inline-block;
+    margin:1.1%;
+    width: 31%;
+    @media (max-width: 767px) {
+        width: 98%;
+    }
+}

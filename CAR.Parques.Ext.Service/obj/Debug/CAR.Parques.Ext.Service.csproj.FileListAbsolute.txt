@@ -1,0 +1,11 @@
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Ext.Service\bin\Debug\CAR.Parques.Ext.Service.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Ext.Service\bin\Debug\CAR.Parques.Ext.Service.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Ext.Service\bin\Debug\CAR.Parques.Common.Entities.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Ext.Service\bin\Debug\Newtonsoft.Json.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Ext.Service\bin\Debug\CAR.Parques.Common.Entities.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Ext.Service\bin\Debug\Newtonsoft.Json.xml
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Ext.Service\obj\Debug\CAR.Parques.Ext.Service.csprojAssemblyReference.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Ext.Service\obj\Debug\CAR.Parques.Ext.Service.csproj.CoreCompileInputs.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Ext.Service\obj\Debug\CAR.Parques.Ext.Service.csproj.CopyComplete
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Ext.Service\obj\Debug\CAR.Parques.Ext.Service.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Ext.Service\obj\Debug\CAR.Parques.Ext.Service.pdb

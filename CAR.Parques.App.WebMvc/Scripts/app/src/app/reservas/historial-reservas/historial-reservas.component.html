@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading" style="background: #3b8fc4; text-align: left">
+      <span class="subtitulo_box fuente-antonio"> HISTORIAL RESERVAS </span>
+    </div>
+
+    <br />
+    <app-grilla
+      #tableView
+      [items]="listadoreservaDetalle"
+      [columns]="columns"
+      [detailTemplate]="detailTemplate"
+    >
+    </app-grilla>
+    <ng-template
+      let-row="row"
+      let-expanded="expanded"
+      ngx-datatable-cell-template
+      #reservaIdTemplate
+    >
+      <div *ngIf="row.ListadoDetalleReserva.length > 0" class="row-container">
+        <div
+          *ngIf="expanded"
+          class="caret-container not-expanded"
+          (click)="toggleExpandRow(row)"
+        >
+          <i><mat-icon>expand_less</mat-icon></i>
+        </div>
+        <div
+          *ngIf="!expanded"
+          class="caret-container expanded"
+          (click)="toggleExpandRow(row)"
+        >
+          <i><mat-icon>expand_more</mat-icon></i>
+        </div>
+      </div>
+      <div *ngIf="row.ListadoDetalleReserva.length == 0" class="row-container;subtitulo_box fuente-antonio">
+        AÚN NO HAS REALIZADO RESERVAS DE NUESTROS SERVICIOS
+      </div>
+    </ng-template>
+    <ng-template let-row="row" ngx-datatable-cell-template #AccionesTemplate>
+      <button
+        *ngIf="row.EstadoId == 2"
+        mat-icon-button
+        matTooltip="Pendiente Cargar comprobante"
+        color="accent"
+        (click)="verComprobanteServicio(row.reservaId)"
+      >
+        <mat-icon>alarm</mat-icon>
+      </button>
+      <button
+        *ngIf="row.EstadoId == 3"
+        mat-icon-button
+        matTooltip="Reserva Aprobada"
+        color="accent"
+        (click)="verComprobanteServicio(row.reservaId)"
+      >
+        <mat-icon>done_outline</mat-icon>
+      </button>
+      <button
+        *ngIf="row.EstadoId == 4"
+        mat-icon-button
+        matTooltip="Reserva Cancelada"
+        color="accent"
+        (click)="verComprobanteServicio(row.reservaId)"
+      >
+        <mat-icon>highlight_off</mat-icon>
+      </button>
+    </ng-template>
+    <ng-template #detailTemplate let-row="row">
+      <app-grilla
+        class="detalle-table"
+        [items]="row.ListadoDetalleReserva"
+        [columns]="detailColumns"
+      >
+      </app-grilla>
+    </ng-template>
+  </div>
+</div>

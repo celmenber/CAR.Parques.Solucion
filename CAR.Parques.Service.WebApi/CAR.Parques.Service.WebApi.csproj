@@ -109,7 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Adaptadores\AdaptadorBase.cs" />
@@ -170,7 +172,6 @@
     <Folder Include="Adaptadores\Log\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Log\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CAR.Parques.Business.Bootstrapper\CAR.Parques.Business.Bootstrapper.csproj">

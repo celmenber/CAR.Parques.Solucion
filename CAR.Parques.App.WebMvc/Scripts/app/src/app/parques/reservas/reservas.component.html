@@ -1,0 +1,230 @@
+<div class="container">
+    <div class="detalle-container">
+        <div class="detalleparque">
+            <h2 [ngStyle]="{'color': _parque.Color}"> {{_parque.NombreParque}} </h2>
+        </div>
+        <hr [ngStyle]="{'background-color': _parque.Color}">
+        <div>
+            <div class="col-md-6" style="height: 550px">
+                <img src="{{Imgprincipal}}" width="100%" height="550px" (click)="vergaleria()">
+            </div>
+            <div class="row" style="height: 550px">
+                <div class="col-md-3" style="height: 275px">
+                    <section class="h-50">
+                        <img src="{{  imagenesGaleria[0] != undefined ? imagenesGaleria[0].RutaArchivoParque : ''}}"
+                            width="100%" height="275px" (click)="vergaleria()">
+                    </section>
+                    <section class="h-50" style="padding-top:2%">
+                        <img src="{{ imagenesGaleria[1] != undefined ? imagenesGaleria[1].RutaArchivoParque : ''}}"
+                            width="100%" height="275px" (click)="vergaleria()">
+                    </section>
+                </div>
+                <div class="col-md-3" style="height: 275px ">
+                    <section class="h-50">
+                        <img src="{{ imagenesGaleria[2] != undefined ? imagenesGaleria[2].RutaArchivoParque : ''}}"
+                            width="100%" height="275px" (click)="vergaleria()">
+                    </section>
+                    <section class="h-50" style="padding-top:2%">
+                        <img src="{{ imagenesGaleria[3] != undefined ? imagenesGaleria[3].RutaArchivoParque : ''}}"
+                            width="100%" height="275px" (click)="vergaleria()">
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <hr [ngStyle]="{'background-color': _parque.Color}">
+        <div class="panel-body fuente-antonio">
+            <h2 [ngStyle]="{'color': _parque.Color}">Descripción</h2>
+            {{_parque.Observacion}}
+        </div>
+
+
+        <br>
+        <br>
+    </div>
+
+    <hr [ngStyle]="{'background-color': _parque.Color}" *ngIf="archivosPdf.length > 0">
+    <div class="panel-body fuente-antonio">
+        <h2 [ngStyle]="{'color': _parque.Color}">Archivos</h2>
+    </div>
+
+    <div class="row" *ngFor="let items of archivosPdf" ng-if="archivosPdf.length > 0">
+        <div class="col-sm-5">
+            <div class="col-sm-5">
+                <p style="color: black">{{ items.TituloArchivParque }}.pdf</p>
+            </div>
+            <div class="col-sm-2">
+                <a [href]="sanitize(items.rutaArchivoParque)" download="{{ items.TituloArchivParque }}.pdf">
+                    <mat-icon style="font-size: 45px">cloud_download</mat-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+    <hr [ngStyle]="{'background-color': _parque.Color}">
+    <div class="panel-body fuente-antonio">
+        <h2 [ngStyle]="{'color': _parque.Color}">Servicios</h2>
+    </div>
+    <!-- <div style="padding: 10px; float: left; width: 45%; text-align: justify;">
+                <div class="fuente-antonio" style="height: 400px">           
+                    <mat-icon class="icon-display">home</mat-icon>Cabañas
+                    <mat-icon class="icon-display">pets</mat-icon> Entrada Mascotas
+                    <mat-icon class="icon-display"> directions_bike</mat-icon> Bicicletas
+                    <mat-icon class="icon-display"> hotel</mat-icon> Camping
+                    <mat-icon class="icon-display"> local_parking</mat-icon> Estacionamiento
+                </div>        
+            </div>
+            <div style="padding: 10px; float: right; width: 45%; text-align: justify;">Texto de la columna (lado derecho)</div> -->
+    <!-- <div class="Servicemain fuente-antonio" style="height: 550px">
+            
+                <mat-icon class="icon-display">home</mat-icon>Cabañas
+                <mat-icon class="icon-display">pets</mat-icon> Entrada Mascotas
+                <mat-icon class="icon-display"> directions_bike</mat-icon> Bicicletas
+                <mat-icon class="icon-display"> hotel</mat-icon> Camping
+                <mat-icon class="icon-display"> local_parking</mat-icon> Estacionamiento
+            </div> -->
+
+
+    <div class="panel-body fuente-antonio" style="align-items: center; ">
+        <label *ngIf="!userAuthenticated" class="error-message">* Para reservar por favor registrate en nuestro sitio web</label>
+        <br/>
+        <div *ngFor="let servicio of listadorservicioDetalle" class="servicio-card">
+            <mat-card *ngIf="servicio.TipoServicioId==1" [ngStyle]="{'background-color': _parque.Color}"
+                style="max-width: 450px;">
+                <mat-card-header>
+                    <div style="height: 80px;">
+                        <mat-card-title>CABAÑAS</mat-card-title>
+                    </div>
+                    <br>
+                </mat-card-header>
+                <img mat-card-image src="https://parques.car.gov.co/imagenes/91912Vistaexteriorcaba%C3%B1as5.jpg"
+                    width="342" height="200">
+                <mat-card-content>
+                    <p style="color:black;">
+                        <b>Descripción:</b> {{ servicio.DescripcionServicioParque }} <br>
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-mini-fab matTooltip="Reservar Servicio" color="primary"
+                        (click)="verServicioParque(servicio.ServicioParqueId, _parque.Color)">
+                        <mat-icon>home</mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+            <mat-card *ngIf="servicio.TipoServicioId==2" [ngStyle]="{'background-color': _parque.Color}"
+                style="max-width: 450px;">
+                <mat-card-header>
+                    <div style="height: 80px;">
+                        <mat-card-title>BICICLETAS</mat-card-title>
+                    </div>
+                    <br>
+                </mat-card-header>
+                <img mat-card-image src="https://www.car.gov.co/uploads/blog/axIBWqwZdR.jpeg" width="342" height="200">
+                <mat-card-content>
+                    <p style="color:black;">
+                        <b>Descripción:</b> {{ servicio.DescripcionServicioParque }} <br>
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-mini-fab matTooltip="Reservar Servicio" color="primary"
+                        (click)="verServicioParque(servicio.ServicioParqueId, _parque.Color)">
+                        <mat-icon>directions_bike</mat-icon>
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+    <br>
+    <br>
+    <!-- <hr [ngStyle]="{'background-color': _parque.Color}">
+    <h2 *ngIf="(objreservas != undefined && objreservas.length>0)" [ngStyle]="{'color': _parque.Color}">Medio Pago</h2>
+    <div *ngIf="(objreservas != undefined && objreservas.length>0)" class="element-form italic negrita cua">
+        <mat-form-field appearance="fill">
+            <mat-label>Medio de pagos</mat-label>
+            <select matNativeControl [(ngModel)]="medioPago">
+                <option value="1">Consignación Bancaria</option>
+                <option value="2">PSE</option>
+                <option value="3">Tarjeta Crédito</option>
+            </select>
+        </mat-form-field>
+    </div> -->
+    <br>
+    <hr [ngStyle]="{'background-color': _parque.Color}">
+    <h2 *ngIf="(objreservas != undefined && objreservas.length>0)" [ngStyle]="{'color': _parque.Color}">Detalle Reservas
+    </h2>
+
+    <div *ngIf="(objreservas != undefined && objreservas.length>0)" class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <!-- <th class="mat-column-Titulo">Detalle Reserva</th> -->
+                    <th class="mat-column-Titulo">Servicio</th>
+                    <th class="mat-column-Titulo">Fecha Reserva</th>
+                    <th class="mat-column-Titulo">Precio</th>
+                    <th class="mat-column-Titulo">Cantidad</th>
+                    <th class="mat-column-Titulo">Descuento</th>
+                    <th class="mat-column-Titulo">-</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of objreservas; index as i;">
+                    <!-- <td class="mat-column"> {{item.NombreServicio}} </td> -->
+                    <td class="mat-column"> {{item.NombreServicio}} </td>
+                    <td class="mat-column"> {{item.FechaInicio + ' - ' + item.FechaFin }} </td>
+                    <td class="mat-column"> ${{item.PrecioTotalServicio}} </td>
+                    <td class="mat-column"> {{item.Cantidad}} </td>
+                    <td class="mat-column"> $ Descuento </td>
+                    <td> <button mat-mini-fab matTooltip="Eliminar Reserva" color="warn"
+                            (click)="eliminarDetalleReserva(i)">
+                            <mat-icon>delete</mat-icon>
+                        </button> </td>
+                </tr>
+                <tr>
+                    <td colspan="5" class="mat-columnTotal">Total Reserva</td>
+                    <td> $ {{total}}</td>
+                    <td></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <ng-template let-row="row" ngx-datatable-cell-template #AccionesTemplate>
+        <button mat-icon-button matTooltip="Detalle Reserva" color="accent"
+            (click)="verServicioParque(row.ServicioParqueId, _parque.Color)">
+            <mat-icon>preview</mat-icon>
+        </button>
+    </ng-template>
+
+    <!-- <textarea matInput placeholder="Observaciones Reserva"></textarea> -->
+    <!-- <hr [ngStyle]="{'background-color': _parque.Color}">        
+            <h2 [ngStyle]="{'color': _parque.Color}">Total</h2> -->
+    <div *ngIf="(objreservas != undefined && objreservas.length>0)" style="text-align: center;">
+        <mat-form-field class="observacion-full-width" appearance="fill">
+            <mat-label>Observaciones</mat-label>
+            <textarea matInput placeholder="Observaciones Reserva" [(ngModel)]="_reserva.observacionReserva"></textarea>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="primary" (click)="preserva()"
+            matTooltip="Preservar Servicios">Pre-reserva</button>
+    </div>
+
+    <!-- <div [ngSwitch]="medioPago">
+        <div *ngSwitchCase="1">
+            <button mat-raised-button color="primary" (click)="preserva()"
+                matTooltip="Preservar Servicios">Pre-reserva</button>
+        </div>
+        <div *ngSwitchCase="2">
+            <a target="_self" class="tm-nav-link" href="https://www.pagosvirtualesavvillas.com.co/personal/pagos/4363"
+                target="_blank">PSE</a>
+            <button mat-raised-button color="primary" [routerLink]="https://www.pagosvirtualesavvillas.com.co/personal/pagos/4363"  matTooltip="Pago PSE">Pago PSE</button>
+        </div>
+        <div *ngSwitchCase="3">
+            <a target="_self" class="tm-nav-link" href="http://pagos.car.gov.co/" target="_blank">Tarjeta Crédito</a>
+            <button mat-raised-button color="primary" (click)="credito()" matTooltip="Pago Tarjeta Crédito">Pago Tarjeta Crédito</button>
+        </div>
+    </div> -->
+
+</div>

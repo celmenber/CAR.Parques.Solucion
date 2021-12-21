@@ -1,0 +1,5 @@
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Models\bin\Release\CAR.Parques.Common.Models.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Models\bin\Release\CAR.Parques.Common.Models.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Models\obj\Release\CAR.Parques.Common.Models.csproj.CoreCompileInputs.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Models\obj\Release\CAR.Parques.Common.Models.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Models\obj\Release\CAR.Parques.Common.Models.pdb

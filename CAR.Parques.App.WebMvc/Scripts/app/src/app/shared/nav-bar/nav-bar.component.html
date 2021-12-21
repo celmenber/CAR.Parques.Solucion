@@ -1,0 +1,66 @@
+  <!-- Navigation Section -->
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+          <span class="icon icon-bar"></span>
+        </button>
+        <div class="brandsimple">
+              <a href="https://www.car.gov.co">
+                  <img src="assets/images/HEADLogoPARQUECAR.png" alt="" style="width:100px;height:100px;">
+              </a>
+          </div>
+            <div class="brandresposive">
+              <a href="https://www.car.gov.co">
+                  <img src="assets/images/logo/LOGOCAR.png" alt="" width="75px">
+              </a>
+          </div>
+      </div>
+      <div class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+        <ul class="nav navbar-nav navbar-right fuente-antonio">
+          <li *ngIf="displayLogin"><a href="/Parques/login" class="smoothScroll"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;IDENTIFICARSE</a></li>
+          <li *ngIf="!displayLogin" class="ubicacionUsuario">
+            <button mat-icon-button [matMenuTriggerFor]="appMenu">
+              <mat-icon>perm_identity</mat-icon>
+            </button>
+          </li>
+          <li *ngIf="!displayLogin" class="ubicacionSimpleUsuario">
+            <div>
+              <span style="font-weight: bold;">{{_authStatus.nameid}}</span>
+              <br>
+              <span style="font-size: small;">{{_authStatus.role_name}}</span>
+              <br>
+              <span style="font-size: small;">{{_authStatus.certserialnumber}}</span>
+            </div>
+          </li>
+          <li *ngIf="!displayLogin"><a href="/Parques/logout" class="smoothScroll"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right fuente-antonio">
+          <ng-container *ngFor="let item of _menu">
+            <li *ngIf="item.RutaMenu !== '#' && item.MenuPadreId === 0">
+              <a href="{{item.RutaMenu}}" class="smoothScroll">{{item.NombreMenu}}</a>
+            </li>
+            <li *ngIf="item.RutaMenu === '#'" class="dropdown"  [ngClass]="{'menuAdmin':item.TipoModuloId===1}">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{item.NombreMenu}} <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <ng-container *ngFor="let itemHijo of _menu">
+                  <li  *ngIf="item.MenuId === itemHijo.MenuPadreId"><a class="dropdown-item" href="{{itemHijo.RutaMenu}}">{{itemHijo.NombreMenu}}</a></li>
+                </ng-container>
+              </ul>
+            </li>
+          </ng-container>
+        </ul>
+        <mat-menu #appMenu="matMenu">
+          <div class="tamanioInfoUsuaio">
+            <span style="font-weight: bold;">{{_authStatus.nameid}}</span>
+            <br>
+            <span style="font-size: small;">{{_authStatus.role_name}}</span>
+            <br>
+            <span style="font-size: small;">{{_authStatus.certserialnumber}}</span>
+          </div>
+        </mat-menu>
+      </div>
+    </div>
+  </div>

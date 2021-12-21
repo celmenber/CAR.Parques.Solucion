@@ -1,0 +1,49 @@
+<div>
+  <h3>Comprobante de pagos</h3>
+  <form [formGroup]="comprobantePagoForm" (ngSubmit)="guardar()">
+    <mat-dialog-content>
+      <div class="element-form">
+        <input
+          matInput
+          type="text"
+          placeholder="Seleccione el comprobante de pago"
+          disabled
+          value="{{ nombreArchivo }}"
+        />
+        <div class="element-form uploadButton">
+          &nbsp;&nbsp;&nbsp;
+          <mat-icon>attach_file</mat-icon>
+          <label for="fileUpload" style="cursor: pointer"> Cargar </label>
+          <input
+            mat-raised-button
+            type="file"
+            id="fileUpload"
+            accept="image/*"
+            multiple
+            style="display: none"
+            (change)="cargarArchivo($event)"
+          />
+          &nbsp;&nbsp;&nbsp;
+        </div>
+      </div>
+
+      <br />
+    </mat-dialog-content>
+    <mat-dialog-actions>
+      <button
+        mat-mini-fab
+        color="primary"
+        aria-label="Guardar"
+        type="submit"
+        [disabled]="comprobantePagoForm.invalid"
+        class="button-icono"
+        formaction=""
+      >
+        <mat-icon>save</mat-icon>
+      </button>
+      <button mat-mini-fab color="warn" aria-label="Cerrar" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-dialog-actions>
+  </form>
+</div>

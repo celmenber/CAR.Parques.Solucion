@@ -1,0 +1,54 @@
+<div>
+    <mat-dialog-actions>
+        <div style="width: 100%; display: flex;">
+            <div>
+            <h3>Detalle del servicio del parque</h3>
+            </div>
+            <div style="margin-left: auto;">
+            <button mat-icon-button color="warn" mat-dialog-close class="button-icono">
+                <mat-icon>close</mat-icon>
+            </button>
+            </div>
+        </div>
+    </mat-dialog-actions>
+    <br>
+    <mat-dialog-content>
+        <div class="element-form">
+            <label class="label-descripcion">Id:</label>&nbsp;
+            <label>{{_servicioParque.ServicioParqueId}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Nombre Servicio:</label>&nbsp;
+            <label>{{_servicioParque.NombreServicioParque}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Descripción:</label>&nbsp;
+            <label>{{_servicioParque.DescripcionServicioParque}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Estado:</label>&nbsp;
+            <label>{{_servicioParque.EstadoServicio}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Fecha Creación:</label>&nbsp;
+            <label>{{_servicioParque.FechaCreacion}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Impuesto:</label>&nbsp;
+            <label>{{_servicioParque.ImpuestoServicio}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Precio:</label>&nbsp;
+            <label>{{_servicioParque.PrecioServicio}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Tipo Servicio:</label>&nbsp;
+            <label>{{_servicioParque.TipoServicio}}</label>
+        </div>
+        <div class="element-form">
+            <label class="label-descripcion">Usuario Creo:</label>&nbsp;
+            <label>{{_servicioParque.UsuarioCreacionNombre}}</label>
+        </div>
+    </mat-dialog-content>
+    <br>
+</div>

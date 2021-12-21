@@ -1,0 +1,14 @@
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\bin\Release\CAR.Parques.Common.Core.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\bin\Release\CAR.Parques.Common.Core.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\bin\Release\AutoMapper.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\bin\Release\CAR.Parques.Common.Entities.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\bin\Release\System.ValueTuple.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\bin\Release\CAR.Parques.Common.Entities.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\bin\Release\AutoMapper.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\bin\Release\AutoMapper.xml
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\bin\Release\System.ValueTuple.xml
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\obj\Release\CAR.Parques.Common.Core.csprojAssemblyReference.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\obj\Release\CAR.Parques.Common.Core.csproj.CoreCompileInputs.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\obj\Release\CAR.Parques.Common.Core.csproj.CopyComplete
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\obj\Release\CAR.Parques.Common.Core.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Common.Core\obj\Release\CAR.Parques.Common.Core.pdb

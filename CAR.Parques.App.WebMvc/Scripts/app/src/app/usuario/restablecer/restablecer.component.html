@@ -1,0 +1,30 @@
+<div class="login-container">
+    <mat-card class="login-card">
+        <mat-card-content>
+                <form class="formulario" [formGroup]="cambioContraseniaForm" (ngSubmit)="cambiarContrasenia(cambioContraseniaForm)">
+                    <div class="element-form">
+                        <label class="label-description">Contraseña:</label>
+                        <mat-form-field class="new-customer-form-field">
+                          <input type="password" matInput placeholder="Contraseña" aria-label="Contraseña" type="password" formControlName="passwordUsuario" />
+                          <mat-error *ngIf="cambioContraseniaForm.get('passwordUsuario').hasError('required')">La contraseña es requerida.</mat-error>
+                          <mat-error *ngIf="cambioContraseniaForm.get('passwordUsuario').hasError('noEspacios')">No puede contenter espacios.</mat-error>
+                        </mat-form-field>
+                      </div>
+                      <div class="element-form">
+                        <label class="label-description">Confirmar Contraseña:</label>
+                        <mat-form-field class="new-customer-form-field">
+                          <input type="password" matInput placeholder="Contraseña" aria-label="Contraseña" type="password" formControlName="passwordUsuarioConfirma" />
+                          <mat-error *ngIf="cambioContraseniaForm.get('passwordUsuarioConfirma').hasError('notEquivalent')">Las credenciales no coinciden.</mat-error>
+                        </mat-form-field>
+                      </div>
+                    <br/>
+                    <div *ngIf="cambioError">
+                        <p class="login-error">{{ cambioError }}</p>
+                    </div>
+                    <div>
+                        <button mat-raised-button type="submit" color="primary" [disabled]="cambioContraseniaForm.invalid">Cambiar</button>
+                    </div>
+                </form>
+        </mat-card-content>
+    </mat-card>
+</div>

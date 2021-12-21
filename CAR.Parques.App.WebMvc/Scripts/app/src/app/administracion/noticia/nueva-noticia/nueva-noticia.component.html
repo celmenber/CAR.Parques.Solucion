@@ -1,0 +1,118 @@
+<div class="container">
+  <div>
+    <div class="headerNew">
+      <div>
+        <h1 class="title">Editor de noticias</h1>
+      </div>
+      <div class="display">
+        <div class="logo">
+          <img src="../../../../assets/images/logo/logo_parques2.png" />
+          <div class="subtitle"></div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <form [formGroup]="formNoticia" (ngSubmit)="guardar()">
+      <div class="headerContentNew">
+        <div class="element-form">
+          <label class="label-description">Título:</label>
+          <mat-form-field class="editar-servicio-parque-form-field">
+            <input
+              type="text"
+              matInput
+              placeholder="Título"
+              arial-label="Título"
+              formControlName="titulo"
+            />
+          </mat-form-field>
+        </div>
+
+        <div class="element-form">
+          <label class="label-description">Fecha Inicio Vigencia:</label>
+          <mat-form-field appearance="fill">
+            <mat-label>Fecha Inicio Vigencia</mat-label>
+            <input
+              matInput
+              [matDatepicker]="fiv"
+              formControlName="fechaInicioVigencia"
+            />
+            <mat-datepicker-toggle matSuffix [for]="fiv">
+            </mat-datepicker-toggle>
+            <mat-datepicker #fiv></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="element-form">
+          <label class="label-description">Fecha Fin Vigencia:</label>
+          <mat-form-field appearance="fill">
+            <mat-label>Fecha Fin Vigencia</mat-label>
+            <input
+              matInput
+              [matDatepicker]="ffv"
+              formControlName="fechaFinVigencia"
+            />
+            <mat-datepicker-toggle matSuffix [for]="ffv">
+            </mat-datepicker-toggle>
+            <mat-datepicker #ffv></mat-datepicker>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row-upload">
+        <div class="element-form">
+          <input
+            class="lblCargar"
+            matInput
+            type="text"
+            placeholder="Seleccione Imagen Principal"
+            disabled
+            value="{{ nombreArchivo }}"
+          />
+          <div class="element-form uploadButton">
+            <mat-icon>attach_file</mat-icon>
+            <label for="fileUpload" style="cursor: pointer"> Cargar </label>
+            <input
+              mat-raised-button
+              type="file"
+              id="fileUpload"
+              accept="image/*"
+              multiple
+              style="display: none"
+              (change)="cargarArchivo($event)"
+            />
+          </div>
+        </div>
+        <div>
+          <small
+            *ngIf="formNoticia.hasError('errorRange')"
+            class="error-message"
+          >
+            *La fecha fin vigencia debe ser mayor a la fecha inicio vigencia
+          </small>
+        </div>
+      </div>
+      <br />
+      <div class="editor">
+        <ngx-editor-menu [editor]="editor"></ngx-editor-menu>
+        <ngx-editor [editor]="editor" formControlName="editorContent">
+        </ngx-editor>
+      </div>
+
+      <br />
+      <mat-dialog-actions>
+        <button
+          mat-mini-fab
+          color="primary"
+          aria-label="Guardar"
+          type="submit"
+          [disabled]="formNoticia.invalid"
+          class="button-icono"
+          formaction=""
+        >
+          <mat-icon>save</mat-icon>
+        </button>
+      </mat-dialog-actions>
+    </form>
+  </div>
+</div>

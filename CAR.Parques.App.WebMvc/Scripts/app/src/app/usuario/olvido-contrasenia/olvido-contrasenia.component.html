@@ -1,0 +1,42 @@
+<div class="new-registro-container">
+    <h3>¿Olvido su contraseña?</h3>
+    <form [formGroup]="olvidoContraseniaForm" (ngSubmit)="enviar()">
+        <mat-dialog-content>
+            <div class="element-form">
+                <label class="label-description">Tipo Documento:</label>
+                <mat-form-field class="new-registro-form-field">
+                    <mat-label>Seleccione...</mat-label>
+                    <mat-select formControlName="tipoDocumentoId">
+                        <mat-option *ngFor="let item of _tipoDocumentos" [value]="item.TipoDocumentoId">{{item.NombreTipoDocumento}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="olvidoContraseniaForm.get('tipoDocumentoId').hasError('required')">El tipo documento es requerido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Documento:</label>
+                <mat-form-field class="new-customer-form-field">
+                    <input type="text" matInput placeholder="Documento" aria-label="Documento" formControlName="documento" />
+                    <mat-error *ngIf="olvidoContraseniaForm.get('documento').hasError('required')">El documento es requerido.</mat-error>
+                    <mat-error *ngIf="olvidoContraseniaForm.get('documento').hasError('noEspacios')">No puede contenter espacios.</mat-error>
+                    <mat-error *ngIf="olvidoContraseniaForm.get('documento').hasError('soloNumeros')">Solo se admiten números.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Correo:</label>
+                <mat-form-field class="new-customer-form-field">
+                    <input type="text" matInput placeholder="correo@dominio.com" aria-label="Correo" formControlName="email" />
+                    <mat-error *ngIf="olvidoContraseniaForm.get('email').hasError('required')">El correo es requerido.</mat-error>
+                    <mat-error *ngIf="olvidoContraseniaForm.get('email').hasError('email')">El correo no tiene la estructura correcta.</mat-error>
+                </mat-form-field>
+            </div>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+            <button mat-mini-fab color="primary" aria-label="Guardar" type="submit" [disabled]="olvidoContraseniaForm.invalid" class="button-icono" formaction="">
+                <mat-icon>send</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" aria-label="Cerrar" mat-dialog-close>
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-dialog-actions>
+    </form>
+</div>

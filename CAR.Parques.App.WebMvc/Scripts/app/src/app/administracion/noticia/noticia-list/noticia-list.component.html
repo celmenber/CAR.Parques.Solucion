@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="container-principal">
+    <div class="titulo-principal">
+      <h1 class="titulo">Noticias</h1>
+      <div class="nuevaNoticia">
+        <button
+          mat-mini-fab
+          color="primary"
+          (click)="redirectToNew()"
+          class="button"
+        >
+          <mat-icon>add</mat-icon>
+        </button>
+        &nbsp;
+        <b>Nueva noticia</b>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div *ngFor="let noticia of noticias" class="noticia-card">
+    <div class="container-noticia">
+      <mat-card>
+        <img
+          mat-card-image
+          src="{{ noticia.urlImage }}"
+          alt="imgNoticia"
+          width="342"
+          height="200"
+        />
+
+        <div class="info-noticia">
+          <span class="category"> Info Parques</span>
+          <span class="date">{{ formatearFecha(noticia.FechaCreacion) }}</span>
+        </div>
+        <span class="description">
+          {{ noticia.NombreContenido }}
+        </span>
+
+        <mat-card-actions>
+          <button
+            mat-mini-fab
+            matTooltip="Editar noticia"
+            color="primary"
+            (click)="goToDetail(noticia.ContenidoId)"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+          &nbsp;
+          <button
+            mat-mini-fab
+            matTooltip="Eliminar noticia"
+            color="warn"
+            (click)="eliminarNoticia(noticia.ContenidoId)"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <hr />
+  </div>
+</div>

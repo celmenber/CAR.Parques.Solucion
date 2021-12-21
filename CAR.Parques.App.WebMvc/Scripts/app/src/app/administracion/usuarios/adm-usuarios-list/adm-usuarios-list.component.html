@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="panel-heading" style="background:#3b8fc4;text-align:left;">
+        <span class="subtitulo_box fuente-antonio">
+            ADMINISTRACIÓN USUARIOS
+        </span>
+    </div>
+    <div class="panel-body fuente-antonio" style="align-items: center; ">
+        <div class="usuario-container">
+            <div class="nuevoUsuario">
+                <button mat-mini-fab color="primary" (click)="openDialog()" class="button">
+                    <mat-icon>add</mat-icon>
+                </button>
+                &nbsp;
+                <b>Nuevo Usuario</b>         
+            </div>
+            <br>
+            <br>
+            <input
+            type="text"
+            style="padding:8px;margin:15px auto;width:30%;"
+            placeholder="Digite el valor que desea consultar"
+            (keyup)="updateFilter($event)"/>
+            <br>
+            <app-grilla #tableView [items]="items" [columns]="columns">
+            </app-grilla>
+            <ng-template let-row="row" ngx-datatable-cell-template #AccionesTemplate>
+                <button mat-icon-button matTooltip="Editar Usuario" color="primary" (click)="editarUsuario(row.UsuarioId)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Eliminar Usuario" color="warn" (click)="eliminarUsuario(row.UsuarioId)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </ng-template>
+        </div>
+    </div>
+</div>

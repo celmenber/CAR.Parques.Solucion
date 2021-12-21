@@ -1,0 +1,3 @@
+interface Array {    
+    delete(): Array;    
+} 

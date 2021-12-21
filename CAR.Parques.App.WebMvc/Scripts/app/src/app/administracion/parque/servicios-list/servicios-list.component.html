@@ -1,0 +1,56 @@
+<div class="servicio-container">
+    <div class="nuevoParque">
+        <button mat-mini-fab color="primary" (click)="openDialog()" class="button">
+            <mat-icon>add</mat-icon>
+        </button>
+        &nbsp;
+        <b>Nuevo Servicio</b>         
+    </div>
+    <app-grilla #tableView [items]="items" [columns]="columns" [detailTemplate]="detailTemplate">
+    </app-grilla>
+    <ng-template let-row="row" let-expanded="expanded" ngx-datatable-cell-template #servicioIdTemplate>
+        <div *ngIf="row.ListadoDescuentos.length > 0" class="row-container">
+            <div *ngIf="expanded" class="caret-container not-expanded" (click)="toggleExpandRow(row)">
+                <i><mat-icon>expand_less</mat-icon></i>
+            </div>
+            <div *ngIf="!expanded" class="caret-container expanded" (click)="toggleExpandRow(row)">
+                <i><mat-icon>expand_more</mat-icon></i>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template let-row="row" ngx-datatable-cell-template #AccionesTemplate>
+        <button mat-icon-button matTooltip="Editar Parque" color="primary" (click)="editarServicio(row.ServicioParqueId)">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Detalle Parque" color="accent" (click)="verServicioParque(row.ServicioParqueId)">
+            <mat-icon>preview</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Eliminar Parque" color="warn" (click)="eliminarServicioParque(row.ServicioParqueId)">
+            <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Adm. Descuentos" color="warn" (click)="nuevoDescuentoServicioParque(row.ServicioParqueId)">
+            <mat-icon>money_off</mat-icon>
+        </button>
+    </ng-template>
+    <ng-template *ngIf="!mobile" let-row="row" ngx-datatable-cell-template #DescripcionTemplate>
+        {{ row.DescripcionServicioParque }}
+    </ng-template>
+    <ng-template *ngIf="!mobile" let-row="row" ngx-datatable-cell-template #ImpuestoTemplate>
+        {{ row.ImpuestoServicio }}
+    </ng-template>
+    <ng-template *ngIf="!mobile" let-row="row" ngx-datatable-cell-template #TipoTemplate>
+        {{ row.TipoServicio }}
+    </ng-template>
+    <ng-template #detailTemplate let-row="row">                
+        <app-grilla class="detalle-table" [items]="row.ListadoDescuentos" [columns]="detailColumns">
+        </app-grilla>
+    </ng-template>
+    <ng-template let-row="row" ngx-datatable-cell-template #AccionesDescuentoTemplate>
+        <button mat-icon-button matTooltip="Editar Parque" color="primary" (click)="editarDescuentoServicio(row.DescuentoTipoUsuarioId)">
+            <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-icon-button matTooltip="Eliminar Parque" color="warn" (click)="eliminarDescuentoServicioParque(row.DescuentoTipoUsuarioId)">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </ng-template>
+</div>

@@ -14,5 +14,7 @@
         ResultadoEjecucion<ResultadoEjecucion<IEnumerable<ReservaDetalleServicioModel>>> ConsultarReservasUsuario(FiltroReserva filtros);
         ResultadoEjecucion<ResultadoEjecucion<int>> CrearArchivoReserva(ArchivoReservaModel archivoReserva);
         ResultadoEjecucion<ResultadoEjecucion<int>> ValidarPreReserva(DetalleReservaModel detalleReserva);
+        ResultadoEjecucion<ResultadoEjecucion<ArchivoReservaModel>> ObtenerArchivoComprobanteReserva(int reservaId);
+        ResultadoEjecucion<ResultadoEjecucion<bool>> ActualizarEstadoReserva(ReservaModel reserva);
     }
 }

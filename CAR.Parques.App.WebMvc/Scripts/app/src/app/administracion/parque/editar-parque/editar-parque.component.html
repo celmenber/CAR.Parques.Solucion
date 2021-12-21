@@ -1,0 +1,95 @@
+<div>
+    <h3>Editar Parque</h3>
+    <form [formGroup]="editarParqueForm" (ngSubmit)="guardar()">
+        <mat-dialog-content>
+            <div class="element-form">
+                <img src="{{_parque.urlImagen}}" width="600" height="400"/>
+                <br>
+            </div>
+            <br>
+            <div class="element-form">
+                <label class="label-description">Nombre:</label>
+                <mat-form-field class="editar-parque-form-field">
+                    <input type="text" matInput placeholder="Nombre" arial-label="Nombre" formControlName="NombreParque"/>
+                    <mat-error *ngIf="editarParqueForm.get('NombreParque').hasError('required')">Nombre del parque requerido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Iniciales:</label>
+                <mat-form-field class="editar-parque-form-field">
+                    <input type="text" matInput placeholder="(Dos letras)" arial-label="Iniciales Parque" formControlName="InicialesParque"/>
+                    <mat-error *ngIf="editarParqueForm.get('InicialesParque').hasError('maxLength')">Solo se permiten 2 carácteres.</mat-error>
+                    <mat-error *ngIf="editarParqueForm.get('InicialesParque').hasError('required')">Las iniciales del parque son requeridas.</mat-error>
+                    <mat-error *ngIf="editarParqueForm.get('InicialesParque').hasError('soloLetras')">Solo se admiten letras.</mat-error>
+                    <mat-error *ngIf="editarParqueForm.get('InicialesParque').hasError('noEspacios')">No se permiten espacios.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Activo:</label>
+                <mat-checkbox formControlName="Activo" class="example-margin">Activo</mat-checkbox>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Dirección:</label>
+                <mat-form-field class="editar-parque-form-field">
+                    <input type="text" matInput placeholder="Dirección" arial-label="Direccion" formControlName="Direccion"/>
+                    <mat-error *ngIf="editarParqueForm.get('Direccion').hasError('required')">La dirección es requerida.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Departamento:</label>
+                <mat-form-field class="editar-parque-form-field">
+                    <mat-label>Seleccione...</mat-label>
+                    <mat-select formControlName="DepartamentoId">
+                        <mat-option *ngFor="let itemDep of _departamentos" [value]="itemDep.DepartamentoId" (onSelectionChange)="obtenerMunicipiosXDepartamento(itemDep.DepartamentoId, $event)">{{itemDep.NombreDepartamento}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="editarParqueForm.get('DepartamentoId').hasError('required')">El departamento es requerido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Municipio:</label>
+                <mat-form-field class="editar-parque-form-field">
+                    <mat-label>Seleccione...</mat-label>
+                    <mat-select formControlName="MunicipioId">
+                        <mat-option *ngFor="let item of _municipios" [value]="item.MunicipioId">{{item.NombreMunicipio}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="editarParqueForm.get('MunicipioId').hasError('required')">El municipio es requerido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Teléfono:</label>
+                <mat-form-field class="editar-parque-form-field">
+                    <input type="text" matInput placeholder="Teléfono" arial-label="Telefono" formControlName="Telefono"/>
+                    <mat-error *ngIf="editarParqueForm.get('Telefono').hasError('required')">El teléfono es requerido.</mat-error>
+                    <mat-error *ngIf="editarParqueForm.get('Telefono').hasError('soloNumeros')">Solo se admiten números.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Observación:</label>
+                <mat-form-field class="editar-parque-form-field">
+                    <textarea  matInput placeholder="Observación" arial-label="Observacion" formControlName="Observacion"></textarea>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <input matInput type="text" placeholder="Seleccione Imagen Principal" disabled value="{{nombreArchivo}}">
+                <div class="element-form uploadButton">
+                    &nbsp;&nbsp;&nbsp;
+                    <mat-icon>attach_file</mat-icon>
+                    <label for="fileUpload" style="cursor: pointer;">
+                        Cargar
+                    </label>
+                    <input mat-raised-button type="file" id="fileUpload" accept="image/*" multiple  style="display:none;" (change)="cargarArchivo($event)"/>
+                    &nbsp;&nbsp;&nbsp;
+                </div>
+            </div>
+            <br>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+            <button mat-mini-fab color="primary" aria-label="Guardar" type="submit" [disabled]="editarParqueForm.invalid" class="button-icono">
+                <mat-icon>save</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" aria-label="Cerrar" mat-dialog-close>
+                <mat-icon>close</mat-icon>
+            </button>
+          </mat-dialog-actions>
+    </form>
+</div>

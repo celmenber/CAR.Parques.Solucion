@@ -1,0 +1,6 @@
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Data.DataTransferObjects\bin\Debug\CAR.Parques.Data.DataTransferObjects.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Data.DataTransferObjects\bin\Debug\CAR.Parques.Data.DataTransferObjects.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Data.DataTransferObjects\obj\Debug\CAR.Parques.Data.DataTransferObjects.csprojAssemblyReference.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Data.DataTransferObjects\obj\Debug\CAR.Parques.Data.DataTransferObjects.csproj.CoreCompileInputs.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Data.DataTransferObjects\obj\Debug\CAR.Parques.Data.DataTransferObjects.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.Data.DataTransferObjects\obj\Debug\CAR.Parques.Data.DataTransferObjects.pdb

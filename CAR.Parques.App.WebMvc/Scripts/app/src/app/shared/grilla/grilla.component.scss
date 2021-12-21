@@ -1,0 +1,56 @@
+
+::ng-deep .ngx-datatable.ngx-table {
+    .datatable-header {
+        .datatable-header-cell{
+            background: #123542;
+            color: white;
+            text-align: center;
+            font-family: 'Antonio';
+        }
+    }
+    
+    .datatable-body {
+        text-align: center;
+        /*.datatable-row-group {
+            padding-top: 10px;
+        }*/
+    }
+
+    .datatable-body .datatable-row-detail {
+        background-color: white !important;
+        height: auto !important;
+        padding: 0 !important;
+    }
+
+    .sortable .sort-btn:before {
+        content: url('../../../assets/images/iconos/iteraccion/compare_arrows-white-18dp.svg');
+    }
+    .sortable .sort-btn.datatable-icon-down:before {
+        content: url('../../../assets/images/iconos/iteraccion/keyboard_arrow_down-white-18dp.svg');
+    }
+    .sortable .sort-btn.datatable-icon-up:before {
+        content: url('../../../assets/images/iconos/iteraccion/keyboard_arrow_up-white-18dp.svg');
+    }
+}
+
+::ng-deep.datatable-row-wrapper {
+    box-shadow: 0 1px 3px 0 rgba(0 , 0, 0, 0.12), 0 1px 2px 0 rgba(0 , 0, 0, 0.24);
+    position: relative;
+}
+
+::ng-deep.table-results-base {
+    //border: 3px solid green;
+    .ngx-datatable {
+        margin: auto;
+        vertical-align: middle;
+    }
+}
+
+.material{
+    @media (min-width: 768px) {
+        width: 90%;
+    }
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+}

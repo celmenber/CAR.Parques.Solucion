@@ -1,0 +1,6 @@
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataOracle\bin\Debug\CAR.Parques.DataOracle.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataOracle\bin\Debug\CAR.Parques.DataOracle.pdb
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataOracle\obj\Debug\CAR.Parques.DataOracle.csprojAssemblyReference.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataOracle\obj\Debug\CAR.Parques.DataOracle.csproj.CoreCompileInputs.cache
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataOracle\obj\Debug\CAR.Parques.DataOracle.dll
+D:\TFS\CarReingenieria\DEV\CAR.Parques.Solucion\CAR.Parques.DataOracle\obj\Debug\CAR.Parques.DataOracle.pdb

@@ -1,0 +1,81 @@
+<div>
+    <h3>Editar Servicio Parque</h3>
+    <form [formGroup]="editarServicioParqueForm" (ngSubmit)="guardar()">
+        <mat-dialog-content>
+            <div class="element-form">
+                <label class="label-description">Servicio Parque Id:</label>
+                <mat-form-field class="editar-servicio-parque-form-field">
+                    <input type="text" matInput arial-label="ServicioParqueId" formControlName="ServicioParqueId"/>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Nombre servicio:</label>
+                <mat-form-field class="editar-servicio-parque-form-field">
+                    <input type="text" matInput placeholder="Nombre Servicio" arial-label="Nombre" formControlName="NombreServicioParque"/>
+                    <mat-error *ngIf="editarServicioParqueForm.get('NombreServicioParque').hasError('required')">Nombre del servicio del parque requerido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Descripción del servicio:</label>
+                <mat-form-field class="editar-parque-form-field">
+                    <textarea  matInput placeholder="Descripción del servicio" arial-label="Descripcion" formControlName="DescripcionServicioParque"></textarea>
+                    <mat-error *ngIf="editarServicioParqueForm.get('DescripcionServicioParque').hasError('required')">La descripción requerida.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Estado Servicio:</label>
+                <mat-form-field class="editar-parque-form-field">
+                    <mat-label>Seleccione...</mat-label>
+                    <mat-select formControlName="EstadoServicioId">
+                        <mat-option *ngFor="let itemEstado of _estadoServicio" [value]="itemEstado.EstadoServicioId">{{itemEstado.NombreEstado}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="editarServicioParqueForm.get('EstadoServicioId').hasError('required')">El estado del servicio es requerido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Fecha Creación:</label>
+                <mat-form-field class="editar-servicio-parque-form-field">
+                    <input type="text" matInput placeholder="Fecha Creación" arial-label="Fecha Creacion" formControlName="FechaCreacion"/>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Impuesto:</label>
+                <mat-form-field class="editar-servicio-parque-form-field">
+                    <input type="text" matInput placeholder="Impuesto" arial-label="Impuesto" formControlName="ImpuestoServicio"/>
+                    <mat-error *ngIf="editarServicioParqueForm.get('ImpuestoServicio').hasError('required')">Impuesto requerido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Precio:</label>
+                <mat-form-field class="editar-servicio-parque-form-field">
+                    <input type="text" matInput placeholder="Precio" arial-label="Precio" formControlName="PrecioServicio"/>
+                    <mat-error *ngIf="editarServicioParqueForm.get('PrecioServicio').hasError('required')">Nombre del servicio del parque requerido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Tipo Servicio:</label>
+                <mat-form-field class="editar-parque-form-field">
+                    <mat-label>Seleccione...</mat-label>
+                    <mat-select formControlName="TipoServicioId">
+                        <mat-option *ngFor="let itemTipoServ of _tipoServicio" [value]="itemTipoServ.TipoServicioId">{{itemTipoServ.NombreTipoServicio}}</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="editarServicioParqueForm.get('TipoServicioId').hasError('required')">El tipo de servicio es requerido.</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="element-form">
+                <label class="label-description">Usuario Creo:</label>
+                <mat-form-field class="editar-servicio-parque-form-field">
+                    <input type="text" matInput arial-label="Usuario Creo" formControlName="UsuarioCreacionNombre"/>
+                </mat-form-field>
+            </div>
+        </mat-dialog-content>
+        <mat-dialog-actions>
+            <button mat-mini-fab color="primary" aria-label="Guardar" type="submit" [disabled]="editarServicioParqueForm.invalid" class="button-icono">
+                <mat-icon>save</mat-icon>
+            </button>
+            <button mat-mini-fab color="warn" aria-label="Cerrar" mat-dialog-close>
+                <mat-icon>close</mat-icon>
+            </button>
+          </mat-dialog-actions>
+    </form>
+</div>
